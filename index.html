@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper spotlight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#page-stage">Skip to main</a>
+
+    <header class="top-bar">
+      <a class="brand" href="#home">Paper spotlight</a>
+      <nav class="page-tabs" aria-label="Sections">
+        <button type="button" class="tab is-active" data-goto="0" aria-current="page">Home</button>
+        <button type="button" class="tab" data-goto="1">Rationale</button>
+        <button type="button" class="tab" data-goto="2">Research Q</button>
+        <button type="button" class="tab" data-goto="3">Method</button>
+        <button type="button" class="tab" data-goto="4">Model</button>
+        <button type="button" class="tab" data-goto="5">Results</button>
+        <button type="button" class="tab" data-goto="6">Interpretation</button>
+        <button type="button" class="tab" data-goto="7">Limitations</button>
+        <button type="button" class="tab" data-goto="8">Future</button>
+        <button type="button" class="tab" data-goto="9">Conclusion</button>
+      </nav>
+    </header>
+
+    <div class="scroll-track" aria-hidden="true"><div class="scroll-fill" id="scroll-fill"></div></div>
+
+    <main class="page-stage" id="page-stage">
+      <!-- PAGE 1: HOME -->
+      <section class="page page--cover is-active" id="home" data-page="0" tabindex="-1" aria-hidden="false">
+        <div class="page-inner page-inner--cover">
+          <p class="eyebrow">Cognitive neuroscience</p>
+          <h1 class="display-title">Your paper title</h1>
+          <p class="display-sub">One sharp line: what the study shows and why it matters.</p>
+          <p class="byline">Presented by <strong>Your name</strong></p>
+
+          <div class="hero-demos">
+            <button type="button" class="hero-demo-btn" data-scroll-to="#pv-fig1">Try: Tool-use visual (Fig. 1)</button>
+          </div>
+        </div>
+
+        <div class="cover-swipe">
+          <p class="h-scroll-hint" aria-hidden="true">Swipe right for key beats</p>
+          <div class="h-scroll" role="region" aria-label="Key beats" tabindex="0">
+            <article class="h-card">
+              <span class="h-card-tag">Beat 1</span>
+              <h2 class="h-card-title">The puzzle</h2>
+              <p class="h-card-text">What was confusing or unknown before this work?</p>
+            </article>
+            <article class="h-card h-card--hot">
+              <span class="h-card-tag">Beat 2</span>
+              <h2 class="h-card-title">The move</h2>
+              <p class="h-card-text">What did the authors do that is clever or new?</p>
+            </article>
+            <article class="h-card">
+              <span class="h-card-tag">Beat 3</span>
+              <h2 class="h-card-title">The payoff</h2>
+              <p class="h-card-text">What should we believe differently after reading?</p>
+            </article>
+          </div>
+        </div>
+
+      <!-- PAGE 1 content lives below cover copy, still inside the page -->
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Home</h2>
+            <p class="page-dek">Clarity, legibility, and a visual anchor for your main idea.</p>
+          </header>
+
+          <div class="big-idea">
+            <h3 class="big-idea-title">BIG IDEA</h3>
+            <p class="big-idea-text">Humans (and some animals) can use objects creatively.</p>
+          </div>
+
+          <article class="pv-block" id="pv-fig1" data-fig="Fig. 1" data-interaction="tooluse">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 1</span>
+                <span class="pv-figname">Tool use examples</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-tooluse">
+                <div class="pv-tooluse-icons" role="group" aria-label="Example characters">
+                  <button type="button" class="pv-tooluse-icon" data-note="Monkey: demonstrates flexible tool-use behavior.">Monkey</button>
+                  <button type="button" class="pv-tooluse-icon" data-note="Crow: shows problem-solving with objects.">Crow</button>
+                  <button type="button" class="pv-tooluse-icon" data-note="Toddler: uses tools with intuitive physical reasoning.">Toddler</button>
+                </div>
+                <div class="pv-tooluse-note" aria-live="polite">Hover or click a character to see what you are looking at.</div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Different agents solve physical problems with objects.</li>
+                <li>Tool use can be creative, not just learned by rote.</li>
+                <li>The paper uses this intuition to motivate a computational model.</li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Why this visual here: It grounds the abstract concept in real-world intuition and makes the study relatable fast.</p>
+          </aside>
+        </div>
+
+      </section>
+
+      <!-- PAGE 2: RATIONALE -->
+      <section class="page page--paper" id="rationale" data-page="1" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Rationale</h2>
+            <p class="page-dek">The problem, the knowledge gap, and why this question is interesting.</p>
+          </header>
+
+          <h3 class="subhead">PROBLEM</h3>
+          <p class="prose">
+            What do people still not fully understand about how tool-use problems are learned and represented in the brain?
+          </p>
+
+          <article class="pv-block pv-block--split" id="pv-fig2" data-fig="Fig. 2" data-interaction="levels">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 2</span>
+                <span class="pv-figname">Game levels overview</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-split">
+              <div class="pv-split-left">
+                <div class="pv-visual">
+                  <div class="pv-levels">
+                    <div class="pv-level-grid" aria-label="20 levels">
+                  <button class="pv-level" type="button" data-detail="Catapult: shoots an object to reach the goal.">1</button>
+                  <button class="pv-level" type="button" data-detail="Bridge: re-routes a path for success.">2</button>
+                  <button class="pv-level" type="button" data-detail="Lever: uses force and pivoting.">3</button>
+                  <button class="pv-level" type="button" data-detail="Ramp: transforms height into motion.">4</button>
+                  <button class="pv-level" type="button" data-detail="Pulley: transfers motion between locations.">5</button>
+                  <button class="pv-level" type="button" data-detail="Wheel: redirects movement with rotation.">6</button>
+                  <button class="pv-level" type="button" data-detail="Magnet: attracts the tool or object.">7</button>
+                  <button class="pv-level" type="button" data-detail="Door: opens a new route to the goal.">8</button>
+                  <button class="pv-level" type="button" data-detail="Sling: launches using tension.">9</button>
+                  <button class="pv-level" type="button" data-detail="Gate: controls timing for a sequence.">10</button>
+                  <button class="pv-level" type="button" data-detail="Trap: blocks incorrect tool placements.">11</button>
+                  <button class="pv-level" type="button" data-detail="Conveyor: moves objects to the right time.">12</button>
+                  <button class="pv-level" type="button" data-detail="Bumper: changes direction on collision.">13</button>
+                  <button class="pv-level" type="button" data-detail="Spin: uses rotational dynamics to solve.">14</button>
+                  <button class="pv-level" type="button" data-detail="Stack: uses position and stability.">15</button>
+                  <button class="pv-level" type="button" data-detail="Wedge: redirects with angled surfaces.">16</button>
+                  <button class="pv-level" type="button" data-detail="Launcher: boosts objects over obstacles.">17</button>
+                  <button class="pv-level" type="button" data-detail="Pivot: rotates the tool for alignment.">18</button>
+                  <button class="pv-level" type="button" data-detail="Spring: stores and releases energy.">19</button>
+                  <button class="pv-level" type="button" data-detail="Tether: connects objects with constraints.">20</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pv-split-right">
+                <div class="pv-level-detail" aria-live="polite">Hover a level to see what kind of physical problem it represents.</div>
+
+                <div class="pv-caption">
+                  <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+                  <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+                </div>
+
+                <div class="pv-see">
+                  <p class="pv-see-title">What you're seeing</p>
+                  <ul class="pv-bullets">
+                    <li>The study uses many different physical puzzles.</li>
+                    <li>Levels vary in how tool placement changes outcomes.</li>
+                    <li>This breadth supports testing a general learning idea.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <h3 class="subhead">KNOWLEDGE GAP</h3>
+          <p class="prose">Summarize what is unknown or contested, and exactly how this study tries to close the gap.</p>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Interaction: hover over each level to make the idea of "many different physical problems" feel concrete.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 3: RESEARCH QUESTION -->
+      <section class="page page--paper" id="research-question" data-page="2" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Research questions</h2>
+            <p class="page-dek">How the questions arise from the big picture and previous research.</p>
+          </header>
+
+          <h3 class="subhead">QUESTION</h3>
+          <p class="prose">What cognitive computation lets people choose tools that work on new physical setups?</p>
+
+          <h3 class="subhead">HYPOTHESIS</h3>
+          <p class="prose">Humans and models can solve by sampling possible actions, simulating outcomes, and then updating a policy.</p>
+
+          <article class="pv-block" id="pv-fig4a" data-fig="Fig. 4A" data-interaction="ssup">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 4A</span>
+                <span class="pv-figname">SSUP algorithm overview</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-ssup">
+                <div class="pv-ssup-steps" role="tablist" aria-label="SSUP steps">
+                  <button class="pv-ssup-step is-active" type="button" data-detail="Sample: generate candidate tool placements or actions to consider.">Sample</button>
+                  <button class="pv-ssup-step" type="button" data-detail="Simulate: predict what would happen if each candidate action is tried.">Simulate</button>
+                  <button class="pv-ssup-step" type="button" data-detail="Update: revise preferences/policy based on success and failure.">Update</button>
+                </div>
+                <div class="pv-ssup-detail" aria-live="polite">Sample: generate candidate tool placements or actions to consider.</div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>A three-step computational recipe.</li>
+                <li>Sample-and-simulate supports flexible reasoning.</li>
+                <li>Update turns experience into future choices.</li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Click each part: Sample, Simulate, Update. This makes the paper's logic feel like an actual process.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 4: METHOD -->
+      <section class="page page--paper" id="method" data-page="3" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Method</h2>
+            <p class="page-dek">Participants, what they did, and how the procedure supports the questions.</p>
+          </header>
+
+          <h3 class="subhead">GAME EXPLANATION</h3>
+          <p class="prose">Describe the tool-use game: goal, actions, and what counts as success.</p>
+
+          <article class="pv-block" id="pv-fig1d" data-fig="Fig. 1D" data-interaction="trialsteps">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 1D</span>
+                <span class="pv-figname">Game trial steps</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-trials">
+                <div class="pv-trial-step-grid" role="group" aria-label="Trial steps">
+                  <button class="pv-trial-step is-active" type="button" data-detail="1. Goal: identify where success should occur.">1. Goal</button>
+                  <button class="pv-trial-step" type="button" data-detail="2. Tool placement: choose and place a tool in the scene.">2. Tool placement</button>
+                  <button class="pv-trial-step" type="button" data-detail="3. Outcome: see what happened and update your strategy.">3. Outcome</button>
+                </div>
+                <div class="pv-trial-detail" aria-live="polite">1. Goal: identify where success should occur.</div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Goal, tool placement, and outcome are the core trial loop.</li>
+                <li>This structure supports measuring learning across attempts.</li>
+                <li>It also creates a clean test for model predictions.</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="split-panels">
+            <div class="panel panel--a">
+              <h3 class="panel-label">VARIABLES</h3>
+              <div class="article-slot article-slot--compact" data-hint="Independent variable: what you manipulated."></div>
+            </div>
+            <div class="panel panel--b">
+              <h3 class="panel-label">PARTICIPANTS</h3>
+              <div class="article-slot article-slot--compact" data-hint="Who participated and why."></div>
+            </div>
+          </div>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Why important: This directly shows the experimental procedure, so readers can "see" the trial.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 5: MODEL -->
+      <section class="page page--paper" id="model" data-page="4" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Model (SSUP)</h2>
+            <p class="page-dek">How internal simulation and policy updating work.</p>
+          </header>
+
+          <h3 class="subhead">3 STEPS</h3>
+          <p class="prose">Sample, simulate, update. Explain how the internal steps map to behavior.</p>
+
+          <article class="pv-block" id="pv-fig4bc" data-fig="Fig. 4B+4C" data-interaction="mode">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 4B+4C</span>
+                <span class="pv-figname">Internal thinking: mind vs world</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-mode">
+                <div class="pv-mode-controls" role="tablist" aria-label="SSUP representation mode">
+                  <button class="pv-mode-btn is-active" type="button" data-mode="mind">In the mind</button>
+                  <button class="pv-mode-btn" type="button" data-mode="world">In the world</button>
+                </div>
+                <div class="pv-mode-visual" aria-label="Mode visual placeholder">
+                  <div class="pv-mode-layer" data-mode-layer="mind">
+                    <div class="pv-visual-placeholder">A simulated scene in the mind (internal rollout)</div>
+                  </div>
+                  <div class="pv-mode-layer" data-mode-layer="world" hidden>
+                    <div class="pv-visual-placeholder">What happens in the world (the actual trial)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>The model simulates outcomes before choosing a policy update.</li>
+                <li>Mind vs world is a mapping between internal prediction and external behavior.</li>
+                <li>Toggle it to connect the abstraction to the trial loop.</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="big-idea">
+            <h3 class="big-idea-title">FLOW DIAGRAM</h3>
+            <p class="big-idea-text">Add a flow diagram here (or keep this placeholder): Sample -> Simulate -> Update.</p>
+          </div>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Interaction: toggle "In the mind" vs "In the world" to see how internal simulation supports real-world choices.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 6: RESULTS -->
+      <section class="page page--paper" id="results" data-page="5" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Results</h2>
+            <p class="page-dek">Main findings in words plus visuals you can reason about.</p>
+          </header>
+
+          <h3 class="subhead">KEY STATS</h3>
+          <p class="prose">Write the headline pattern first: who beats who, under what condition, and why it matters.</p>
+
+          <article class="pv-block" id="pv-fig5ab" data-fig="Fig. 5A+5B" data-interaction="resultsOverlay">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 5A+5B</span>
+                <span class="pv-figname">Attempts and accuracy (overlay toggle)</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-results">
+                <div class="pv-results-controls" role="tablist" aria-label="Results overlay mode">
+                  <button class="pv-view-btn" type="button" data-view="both">Both</button>
+                  <button class="pv-view-btn is-active" type="button" data-view="human">Human only</button>
+                  <button class="pv-view-btn" type="button" data-view="model">Model only</button>
+                </div>
+
+                <div class="pv-results-visual" aria-label="Overlay visual placeholder">
+                  <div class="pv-results-overlay" data-view="human">
+                    <div class="pv-meter">
+                      <div class="pv-meter-row">
+                        <span class="pv-meter-label">Attempts</span>
+                        <span class="pv-meter-num">[H value]</span>
+                      </div>
+                      <div class="pv-meter-track"><div class="pv-meter-fill" style="--w:72%"></div></div>
+                      <div class="pv-meter-row">
+                        <span class="pv-meter-label">Accuracy</span>
+                        <span class="pv-meter-num">[H value]</span>
+                      </div>
+                      <div class="pv-meter-track"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:64%"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="pv-results-overlay" data-view="model" hidden>
+                    <div class="pv-meter">
+                      <div class="pv-meter-row">
+                        <span class="pv-meter-label">Attempts</span>
+                        <span class="pv-meter-num">[M value]</span>
+                      </div>
+                      <div class="pv-meter-track"><div class="pv-meter-fill" style="--w:80%"></div></div>
+                      <div class="pv-meter-row">
+                        <span class="pv-meter-label">Accuracy</span>
+                        <span class="pv-meter-num">[M value]</span>
+                      </div>
+                      <div class="pv-meter-track"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:74%"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="pv-results-overlay" data-view="both" hidden>
+                    <div class="pv-comparison">
+                      <div class="pv-comp-col">
+                        <div class="pv-comp-title">Human</div>
+                        <div class="pv-meter-track small"><div class="pv-meter-fill" style="--w:72%"></div></div>
+                      </div>
+                      <div class="pv-comp-col">
+                        <div class="pv-comp-title">Model</div>
+                        <div class="pv-meter-track small"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:74%"></div></div>
+                      </div>
+                    </div>
+                    <p class="pv-inline-note">Replace values and interpret the direction of effects.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Attempts and accuracy summarize overall performance.</li>
+                <li>Overlay toggle helps connect model vs human.</li>
+                <li>Use this to justify your results narrative.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="pv-block" id="pv-fig6a" data-fig="Fig. 6A" data-interaction="curves">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 6A</span>
+                <span class="pv-figname">Learning curves over attempts</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-curves" role="img" aria-label="Placeholder learning curves chart">
+                <div class="pv-curves-controls" role="tablist" aria-label="Curve visibility">
+                  <button class="pv-view-btn is-active" type="button" data-curves="both">Both</button>
+                  <button class="pv-view-btn" type="button" data-curves="human">Human</button>
+                  <button class="pv-view-btn" type="button" data-curves="model">Model</button>
+                </div>
+                <svg class="pv-chart" viewBox="0 0 520 240" aria-label="Learning curve chart placeholder">
+                  <line x1="60" y1="200" x2="500" y2="200" stroke="var(--line)" stroke-width="2" />
+                  <line x1="60" y1="40" x2="60" y2="200" stroke="var(--line)" stroke-width="2" />
+                  <text x="70" y="215" font-size="12" fill="var(--muted)">Attempts</text>
+                  <text x="10" y="60" font-size="12" fill="var(--muted)" transform="rotate(-90 10 60)">Performance</text>
+
+                  <polyline class="pv-curve pv-curve--human" data-curve="human" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="80,170 130,150 180,140 230,120 280,105 330,95 380,88 430,82 470,76" />
+                  <polyline class="pv-curve pv-curve--model" data-curve="model" fill="none" stroke="var(--accent-2)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="80,180 130,165 180,155 230,135 280,120 330,110 380,100 430,92 470,85" />
+                  <circle cx="230" cy="120" r="6" fill="var(--accent)" />
+                  <circle cx="280" cy="120" r="6" fill="var(--accent-2)" opacity="0.0001" />
+                </svg>
+                <div class="pv-legend">
+                  <span class="pv-legend-item"><span class="pv-dot pv-dot--human"></span> Human</span>
+                  <span class="pv-legend-item"><span class="pv-dot pv-dot--model"></span> Model</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Performance changes over repeated attempts.</li>
+                <li>Compare curve shapes to infer learning dynamics.</li>
+                <li>Use the plot to support your hypothesis.</li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Toggle overlays so you can explain the direction and speed of learning in plain language.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 7: INTERPRETATION -->
+      <section class="page page--paper" id="interpretation" data-page="6" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Interpretation</h2>
+            <p class="page-dek">What the findings mean and where to look next.</p>
+          </header>
+
+          <h3 class="subhead">TAKEAWAYS</h3>
+          <p class="prose">Write 2-4 takeaways that tie directly back to your hypotheses.</p>
+
+          <article class="pv-block" id="pv-fig6b" data-fig="Fig. 6B" data-interaction="clusters">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 6B</span>
+                <span class="pv-figname">Where tools are placed: humans vs model</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-clusters">
+                <div class="pv-cluster-map" role="img" aria-label="Placeholder cluster map">
+                  <button type="button" class="pv-cluster-dot" style="--x:32%;--y:36%;" data-detail="Cluster A: concentrated placements suggest a preferred strategy.">A</button>
+                  <button type="button" class="pv-cluster-dot pv-cluster-dot--b" style="--x:70%;--y:34%;" data-detail="Cluster B: different region suggests an alternative solution path.">B</button>
+                  <button type="button" class="pv-cluster-dot pv-cluster-dot--c" style="--x:50%;--y:72%;" data-detail="Cluster C: sparse placements indicate exploration or uncertainty.">C</button>
+                  <button type="button" class="pv-cluster-dot pv-cluster-dot--d" style="--x:35%;--y:62%;" data-detail="Cluster D: overlap with model suggests shared representations.">D</button>
+                </div>
+                <div class="pv-cluster-detail" aria-live="polite">Hover a cluster dot to see what difference it highlights.</div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Different clusters can correspond to different strategies.</li>
+                <li>Compare humans and the model to infer representational similarity.</li>
+                <li>Hover interaction makes the comparison feel tangible.</li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Interaction: hover clusters to see behavior differences and tie them to the authors' interpretation.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 8: LIMITATIONS -->
+      <section class="page page--paper" id="limitations" data-page="7" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Limitations</h2>
+            <p class="page-dek">Strengths and weaknesses, rigor, and what questions remain.</p>
+          </header>
+
+          <article class="pv-block" id="pv-fig8" data-fig="Fig. 8" data-interaction="limitationsDemo">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 8</span>
+                <span class="pv-figname">Where the model fails</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-demo">
+                <div class="pv-visual-placeholder" data-hint="Replace with your paper's failure-case visual."> </div>
+                <button type="button" class="pv-demo-btn" data-pv-demo-toggle>Run demo: show failure cases</button>
+                <div class="pv-demo-reveal" hidden>
+                  <ul class="pv-bullets">
+                    <li>Failure case 1: model mispredicts a key physical constraint.</li>
+                    <li>Failure case 2: incorrect tool placement leads to systematic error.</li>
+                    <li>Failure case 3: evidence suggests an alternative strategy.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Some situations are outside the model's assumptions.</li>
+                <li>Discuss why these failures matter for rigor.</li>
+                <li>Use the take-home to set future directions.</li>
+              </ul>
+            </div>
+          </article>
+
+          <h3 class="subhead">TAKE HOME</h3>
+          <p class="prose">In 1-2 sentences: what should someone remember, and what does it imply about tool-use cognition?</p>
+        </div>
+      </section>
+
+      <!-- PAGE 9: FUTURE -->
+      <section class="page page--paper" id="future" data-page="8" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Future directions</h2>
+            <p class="page-dek">Specific next steps that follow from the limitations.</p>
+          </header>
+
+          <article class="pv-block" id="pv-fig7a" data-fig="Fig. 7A" data-interaction="futureFilter">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. 7A</span>
+                <span class="pv-figname">New levels (validation)</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <div class="pv-future">
+                <div class="pv-future-controls" role="tablist" aria-label="Future filter">
+                  <button class="pv-future-btn is-active" type="button" data-filter="all">All</button>
+                  <button class="pv-future-btn" type="button" data-filter="training">Training</button>
+                  <button class="pv-future-btn" type="button" data-filter="validation">Validation</button>
+                </div>
+                <div class="pv-level-grid pv-level-grid--future" aria-label="Validation levels grid">
+                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: helps learn priors.">T1</button>
+                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: tests generalization.">V1</button>
+                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: calibrates simulation.">T2</button>
+                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: checks if updates transfer.">V2</button>
+                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: strengthens tool-use heuristics.">T3</button>
+                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: reveals edge cases.">V3</button>
+                </div>
+                <div class="pv-future-detail" aria-live="polite">Select an item to see what it validates.</div>
+              </div>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>Validation levels test whether learning transfers.</li>
+                <li>New levels help show robustness and generality.</li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">Use this interactive grid as your concrete "next steps" section. Replace each label with the paper's level names.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PAGE 10: CONCLUSION -->
+      <section class="page page--paper" id="conclusion" data-page="9" tabindex="-1" aria-hidden="true">
+        <div class="page-inner">
+          <header class="page-head">
+            <h2 class="page-title">Conclusion</h2>
+            <p class="page-dek">Take-home message and why your reader should care.</p>
+          </header>
+
+          <h3 class="subhead">FINAL STATEMENT</h3>
+          <p class="prose">In 2-4 sentences: what should be true about cognition after reading this paper?</p>
+
+          <div class="recap-block" aria-label="Visual recap: Sample, Simulate, Update">
+            <div class="recap-step">
+              <div class="recap-icon">Sample</div>
+              <div class="recap-arrow">→</div>
+            </div>
+            <div class="recap-step">
+              <div class="recap-icon">Simulate</div>
+              <div class="recap-arrow">→</div>
+            </div>
+            <div class="recap-step">
+              <div class="recap-icon recap-icon--accent">Update</div>
+            </div>
+          </div>
+
+          <aside class="insight-box">
+            <h3 class="insight-title">INSIGHT BOX</h3>
+            <p class="insight-text">CTA: Replace this button with what you need (copy link, export notes, etc.).</p>
+            <button type="button" class="cta-btn" id="cta-copy-takeaway">Copy your take-home (placeholder)</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <nav class="pager" aria-label="Change section">
+      <p class="pager-hint">Scroll at the <strong>top</strong> or <strong>bottom</strong> of a section to move between pages.</p>
+      <div class="pager-row">
+        <button type="button" class="pager-btn" id="pager-prev" aria-label="Previous section">
+          <span aria-hidden="true">←</span> Back
+        </button>
+        <div class="pager-dots" id="pager-dots" role="tablist" aria-label="Section"></div>
+        <button type="button" class="pager-btn pager-btn--primary" id="pager-next" aria-label="Next section">
+          Next <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </nav>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
