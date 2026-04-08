@@ -16,7 +16,7 @@
   --sky: #7dd3fc;
   --peach: #fdba74;
   --radius: 16px;
-  --font-display: "Syne", system-ui, sans-serif;
+  --font-display: "Playfair Display", system-ui, serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-serif: "Source Serif 4", Georgia, serif;
   --measure: 40rem;
@@ -354,6 +354,12 @@ code {
   background: linear-gradient(145deg, #fff, #fff9f5);
 }
 
+.h-scroll > .h-card:first-child {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
 .h-card--wide {
   flex: 0 0 min(88vw, 380px);
 }
@@ -371,7 +377,7 @@ code {
 
 .h-card-title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--ink);
@@ -936,7 +942,7 @@ details[open] .expando-btn::after {
 }
 
 .pv-figname {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 900;
   font-size: 1.08rem;
   color: var(--ink);
