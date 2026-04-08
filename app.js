@@ -13,13 +13,31 @@
   var wheelCooldown = reduceMotion ? 320 : 620;
   var EDGE = 56;
 
+  function resolveHashTarget(hashId) {
+    if (!hashId) return null;
+
+    var el = document.getElementById(hashId);
+    if (!el) return null;
+
+    var pageEl = el.closest ? el.closest(".page[data-page]") : null;
+    if (!pageEl) return null;
+
+    var idx = parseInt(pageEl.getAttribute("data-page"), 10);
+    if (isNaN(idx)) return null;
+
+    return { el: el, pageEl: pageEl, index: idx };
+  }
+
   function getPageIndexFromHash() {
     var h = (window.location.hash || "").replace(/^#/, "");
     if (!h) return 0;
     var i = pages.findIndex(function (p) {
       return p.id === h;
     });
-    return i >= 0 ? i : 0;
+    if (i >= 0) return i;
+
+    var target = resolveHashTarget(h);
+    return target ? target.index : 0;
   }
 
   function setScrollProgress() {
@@ -162,7 +180,37 @@
   });
 
   window.addEventListener("hashchange", function () {
-    goToPage(getPageIndexFromHash());
+    var h = (window.location.hash || "").replace(/^#/, "");
+    if (!h) {
+      goToPage(0);
+      return;
+    }
+
+    // If the hash matches a page id, treat it as page navigation.
+    var i = pages.findIndex(function (p) {
+      return p.id === h;
+    });
+    if (i >= 0) {
+      goToPage(i);
+      return;
+    }
+
+    // Otherwise, treat it as an in-page anchor within one of the pages.
+    var target = resolveHashTarget(h);
+    if (!target) {
+      goToPage(0);
+      return;
+    }
+
+    goToPage(target.index);
+    window.setTimeout(function () {
+      // If the anchor lives inside a <details>, open it.
+      if (target.el && target.el.closest) {
+        var details = target.el.closest("details.drop");
+        if (details) details.open = true;
+      }
+      target.el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 220);
   });
 
   pages.forEach(function (p) {
@@ -447,6 +495,93 @@
     });
   }
 
+  function setupGlossaryTooltips() {
+    var terms = document.querySelectorAll(".gloss[data-def]");
+    if (!terms.length) return;
+
+    var tip = document.createElement("div");
+    tip.className = "gloss-tip";
+    tip.hidden = true;
+    document.body.appendChild(tip);
+
+    var activeEl = null;
+
+    function hide() {
+      activeEl = null;
+      tip.hidden = true;
+      tip.textContent = "";
+    }
+
+    function showFor(el) {
+      var def = el.getAttribute("data-def");
+      if (!def) return;
+      activeEl = el;
+      tip.textContent = def;
+      tip.hidden = false;
+      position();
+    }
+
+    function position() {
+      if (!activeEl || tip.hidden) return;
+      var r = activeEl.getBoundingClientRect();
+
+      // Prefer above; fall back below.
+      var gap = 10;
+      var left = Math.min(window.innerWidth - tip.offsetWidth - 12, Math.max(12, r.left));
+      var top = r.top - tip.offsetHeight - gap;
+      if (top < 12) top = r.bottom + gap;
+      tip.style.left = left + "px";
+      tip.style.top = top + "px";
+    }
+
+    terms.forEach(function (el) {
+      el.addEventListener("pointerenter", function () {
+        showFor(el);
+      });
+      el.addEventListener("pointerleave", hide);
+      el.addEventListener("focus", function () {
+        showFor(el);
+      });
+      el.addEventListener("blur", hide);
+      el.addEventListener("click", function (e) {
+        // Allow tap to toggle on touch.
+        if (activeEl === el && !tip.hidden) {
+          hide();
+          return;
+        }
+        showFor(el);
+        e.preventDefault();
+      });
+    });
+
+    window.addEventListener("scroll", position, { passive: true });
+    window.addEventListener("resize", position, { passive: true });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") hide();
+    });
+    document.addEventListener("pointerdown", function (e) {
+      if (!activeEl) return;
+      if (e.target === activeEl || tip.contains(e.target)) return;
+      hide();
+    });
+  }
+
+  function setupExpandableSectionNav() {
+    // Make the pill nav open the matching <details> section.
+    document.querySelectorAll(".vnav-link[href^=\"#\"]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        var hash = (a.getAttribute("href") || "").replace(/^#/, "");
+        if (!hash) return;
+        var el = document.getElementById(hash);
+        if (!el) return;
+        if (el.closest) {
+          var details = el.closest("details.drop");
+          if (details) details.open = true;
+        }
+      });
+    });
+  }
+
   // Build UI
   buildDots();
   goToPage(getPageIndexFromHash());
@@ -454,6 +589,8 @@
   window.addEventListener("load", function () {
     goToPage(getPageIndexFromHash());
     setupPaperVisualBlocks();
+    setupExpandableSectionNav();
+    setupGlossaryTooltips();
     setupCTA();
   });
 })();

@@ -21,13 +21,10 @@
         <button type="button" class="tab is-active" data-goto="0" aria-current="page">Home</button>
         <button type="button" class="tab" data-goto="1">Rationale</button>
         <button type="button" class="tab" data-goto="2">Research Q</button>
-        <button type="button" class="tab" data-goto="3">Method</button>
-        <button type="button" class="tab" data-goto="4">Model</button>
-        <button type="button" class="tab" data-goto="5">Results</button>
-        <button type="button" class="tab" data-goto="6">Interpretation</button>
-        <button type="button" class="tab" data-goto="7">Limitations</button>
-        <button type="button" class="tab" data-goto="8">Future</button>
-        <button type="button" class="tab" data-goto="9">Conclusion</button>
+        <button type="button" class="tab" data-goto="3">Study design</button>
+        <button type="button" class="tab" data-goto="4">Results</button>
+        <button type="button" class="tab" data-goto="5">Limitations</button>
+        <button type="button" class="tab" data-goto="6">Future</button>
       </nav>
     </header>
 
@@ -50,22 +47,38 @@
         </div>
 
         <div class="cover-swipe">
-          <p class="h-scroll-hint" aria-hidden="true">Swipe right for key beats</p>
+          <p class="h-scroll-hint" aria-hidden="true">Key Insights from the Paper</p>
           <div class="h-scroll" role="region" aria-label="Key beats" tabindex="0">
             <article class="h-card">
-              <span class="h-card-tag">Beat 1</span>
+              <span class="h-card-tag">1</span>
               <h2 class="h-card-title">The puzzle</h2>
-              <p class="h-card-text">What was confusing or unknown before this work?</p>
+              <p class="h-card-text">Humans solve new physical problems quickly, AI systems struggle.</p>
             </article>
             <article class="h-card h-card--hot">
-              <span class="h-card-tag">Beat 2</span>
-              <h2 class="h-card-title">The move</h2>
-              <p class="h-card-text">What did the authors do that is clever or new?</p>
+              <span class="h-card-tag">2</span>
+              <h2 class="h-card-title">The Gap</h2>
+              <p class="h-card-text">Existing AI needs massive training data or perfect knowledge of physics.</p>
             </article>
             <article class="h-card">
-              <span class="h-card-tag">Beat 3</span>
-              <h2 class="h-card-title">The payoff</h2>
-              <p class="h-card-text">What should we believe differently after reading?</p>
+              <span class="h-card-tag">3</span>
+              <h2 class="h-card-title">The Human Advantage</h2>
+              <p class="h-card-text">Humans don't try random actions. They focus on ideas that seem likely to work.</p>
+            </article>
+            <article class="h-card">
+              <span class="h-card-tag">4</span>
+              <h2 class="h-card-title">The Key Mechanism</h2>
+              <p class="h-card-text">People mentally simulate what might happen before taking action.</p>
+            </article>
+            <article class="h-card">
+              <span class="h-card-tag">5</span>
+              <h2 class="h-card-title">The Model</h2>
+              <p class="h-card-text">The paper introduces a model (SSUP) for this process:
+                Sample, Simulate, Update</p>
+            </article>
+            <article class="h-card">
+              <span class="h-card-tag">6</span>
+              <h2 class="h-card-title">The Takeaway</h2>
+              <p class="h-card-text">Human intelligence is powerful because we predict, test, and learn efficiently.</p>
             </article>
           </div>
         </div>
@@ -73,7 +86,7 @@
       <!-- PAGE 1 content lives below cover copy, still inside the page -->
         <div class="page-inner">
           <header class="page-head">
-            <h2 class="page-title">Home</h2>
+            <h2 class="page-title">Background</h2>
             <p class="page-dek">Clarity, legibility, and a visual anchor for your main idea.</p>
           </header>
 
@@ -94,34 +107,36 @@
             <div class="pv-visual">
               <div class="pv-tooluse">
                 <div class="pv-tooluse-icons" role="group" aria-label="Example </div>characters">
-                  <button type="button" class="pv-tooluse-icon" data-note="Monkey: demonstrates flexible tool-use behavior.">Monkey</button>
-                  <button type="button" class="pv-tooluse-icon" data-note="Crow: shows problem-solving with objects.">Crow</button>
-                  <button type="button" class="pv-tooluse-icon" data-note="Toddler: uses tools with intuitive physical reasoning.">Toddler</button>
+                  <button type="button" class="pv-tooluse-icon pv-tooluse-icon--monkey" data-note="Bearded capuchin monkey opening a cashew nut with an appropriately sized stone.">Monkey</button>
+                  <button type="button" class="pv-tooluse-icon pv-tooluse-icon--crow" data-note="New Caledonian crow using heavy blocks to raise the water level in a tube to retrieve food.">Crow</button>
+                  <button type="button" class="pv-tooluse-icon pv-tooluse-icon--toddler" data-note="Toddler using a shovel to reach a ball">Toddler</button>
                 </div>
                 <div class="pv-tooluse-note" aria-live="polite">Hover or click a character to see what you are looking at.</div>
               </div>
             </div>
 
             <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+              <p class="pv-caption-translated">Humans and some animals can use objects creatively to solve problems.</p>
+              <p class="pv-caption-original" hidden>Humans and some animals can use objects as tools to solve problems, even in situations they have never encountered before.</p>
             </div>
 
             <div class="pv-see">
               <p class="pv-see-title">What you're seeing</p>
               <ul class="pv-bullets">
-          <li>Different agents solve physical problems with objects.</li>
-          <li>Tool use can be creative, not just learned by rote.</li>
-          <li>The paper uses this intuition to motivate a computational model.</li>
+          <li>Different <span class="gloss" tabindex="0" data-def="Here, an agent means any problem-solver (human, animal, or AI model) that chooses actions to try to reach a goal.">agents</span> solve physical problems with objects.</li>
+          <li>Tool use can be flexible and adapted to new situations.</li>
+          <li>The paper uses this idea to study how humans solve problems so efficiently</li>
               </ul>
             </div>
           </article>
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Interaction: hover over each level to make the idea of "many different physical problems" feel concrete.</p>
+            <p class="insight-text">Humans are not just using tools — they are reasoning about how objects will behave before acting.</p>
+            <p class="insight-text">This ability to predict and adapt is what makes human problem solving both flexible and efficient, and it is the core idea this paper aims to explain.</p>
           </aside>
-
+          <div class="spacing"></div> 
+          <div class="spacing"></div> 
           <div class="spacing"></div> <!-- Extra space added here -->
           <div class="spacing"></div> <!-- Additional extra space after insight block -->
         </div>
@@ -266,144 +281,158 @@
         </div>
       </section>
 
-      <!-- PAGE 4: METHOD -->
-      <section class="page page--paper" id="method" data-page="3" tabindex="-1" aria-hidden="true">
+      <!-- PAGE 4: STUDY DESIGN (METHOD + MODEL) -->
+      <section class="page page--paper" id="study-design" data-page="3" tabindex="-1" aria-hidden="true">
         <div class="page-inner">
           <header class="page-head">
-            <h2 class="page-title">Method</h2>
-            <p class="page-dek">Participants, what they did, and how the procedure supports the questions.</p>
+            <h2 class="page-title">Study design</h2>
+            <p class="page-dek">Methods, participants, variables, and the SSUP model in one place.</p>
           </header>
 
-          <h3 class="subhead">GAME EXPLANATION</h3>
-          <p class="prose">Describe the tool-use game: goal, actions, and what counts as success.</p>
+          <nav class="vnav" aria-label="Study design navigation">
+            <a class="vnav-link" href="#sd-method">Method</a>
+            <a class="vnav-link" href="#sd-variables">Variables</a>
+            <a class="vnav-link" href="#sd-participants">Participants</a>
+            <a class="vnav-link" href="#sd-model">Model (SSUP)</a>
+          </nav>
 
-          <article class="pv-block" id="pv-fig1d" data-fig="Fig. 1D" data-interaction="trialsteps">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 1D</span>
-                <span class="pv-figname">Game trial steps</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
+          <details class="drop" open>
+            <summary class="drop-summary" id="sd-method">Method</summary>
+            <div class="drop-body">
+              <h3 class="subhead">GAME EXPLANATION</h3>
+              <p class="prose">Describe the tool-use game: goal, actions, and what counts as success.</p>
 
-            <div class="pv-visual">
-              <div class="pv-trials">
-                <div class="pv-trial-step-grid" role="group" aria-label="Trial steps">
-                  <button class="pv-trial-step is-active" type="button" data-detail="1. Goal: identify where success should occur.">1. Goal</button>
-                  <button class="pv-trial-step" type="button" data-detail="2. Tool placement: choose and place a tool in the scene.">2. Tool placement</button>
-                  <button class="pv-trial-step" type="button" data-detail="3. Outcome: see what happened and update your strategy.">3. Outcome</button>
+              <article class="pv-block" id="pv-fig1d" data-fig="Fig. 1D" data-interaction="trialsteps">
+                <div class="pv-top">
+                  <div class="pv-figmeta">
+                    <span class="pv-figlabel">Fig. 1D</span>
+                    <span class="pv-figname">Game trial steps</span>
+                  </div>
+                  <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
                 </div>
-                <div class="pv-trial-detail" aria-live="polite">1. Goal: identify where success should occur.</div>
-              </div>
-            </div>
 
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
+                <div class="pv-visual">
+                  <div class="pv-trials">
+                    <div class="pv-trial-step-grid" role="group" aria-label="Trial steps">
+                      <button class="pv-trial-step is-active" type="button" data-detail="1. Goal: identify where success should occur.">1. Goal</button>
+                      <button class="pv-trial-step" type="button" data-detail="2. Tool placement: choose and place a tool in the scene.">2. Tool placement</button>
+                      <button class="pv-trial-step" type="button" data-detail="3. Outcome: see what happened and update your strategy.">3. Outcome</button>
+                    </div>
+                    <div class="pv-trial-detail" aria-live="polite">1. Goal: identify where success should occur.</div>
+                  </div>
+                </div>
 
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
-              <ul class="pv-bullets">
-                <li>Goal, tool placement, and outcome are the core trial loop.</li>
-                <li>This structure supports measuring learning across attempts.</li>
-                <li>It also creates a clean test for model predictions.</li>
-              </ul>
-            </div>
-          </article>
+                <div class="pv-caption">
+                  <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+                  <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+                </div>
 
-          <div class="split-panels">
-            <div class="panel panel--a">
-              <h3 class="panel-label">VARIABLES</h3>
+                <div class="pv-see">
+                  <p class="pv-see-title">What you're seeing</p>
+                  <ul class="pv-bullets">
+                    <li>Goal, tool placement, and outcome are the core trial loop.</li>
+                    <li>This structure supports measuring learning across attempts.</li>
+                    <li>It also creates a clean test for model predictions.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </details>
+
+          <details class="drop">
+            <summary class="drop-summary" id="sd-variables">Variables</summary>
+            <div class="drop-body">
               <div class="article-slot article-slot--compact" data-hint="Independent variable: what you manipulated."></div>
+              <div class="article-slot article-slot--compact" data-hint="Dependent variable: what you measured."></div>
             </div>
-            <div class="panel panel--b">
-              <h3 class="panel-label">PARTICIPANTS</h3>
+          </details>
+
+          <details class="drop">
+            <summary class="drop-summary" id="sd-participants">Participants</summary>
+            <div class="drop-body">
               <div class="article-slot article-slot--compact" data-hint="Who participated and why."></div>
             </div>
-          </div>
+          </details>
+
+          <details class="drop">
+            <summary class="drop-summary" id="sd-model">Model (SSUP)</summary>
+            <div class="drop-body">
+              <h3 class="subhead">3 STEPS</h3>
+              <p class="prose">Sample, simulate, update. Explain how the internal steps map to behavior.</p>
+
+              <article class="pv-block" id="pv-fig4bc" data-fig="Fig. 4B+4C" data-interaction="mode">
+                <div class="pv-top">
+                  <div class="pv-figmeta">
+                    <span class="pv-figlabel">Fig. 4B+4C</span>
+                    <span class="pv-figname">Internal thinking: mind vs world</span>
+                  </div>
+                  <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+                </div>
+
+                <div class="pv-visual">
+                  <div class="pv-mode">
+                    <div class="pv-mode-controls" role="tablist" aria-label="SSUP representation mode">
+                      <button class="pv-mode-btn is-active" type="button" data-mode="mind">In the mind</button>
+                      <button class="pv-mode-btn" type="button" data-mode="world">In the world</button>
+                    </div>
+                    <div class="pv-mode-visual" aria-label="Mode visual placeholder">
+                      <div class="pv-mode-layer" data-mode-layer="mind">
+                        <div class="pv-visual-placeholder">A simulated scene in the mind (internal rollout)</div>
+                      </div>
+                      <div class="pv-mode-layer" data-mode-layer="world" hidden>
+                        <div class="pv-visual-placeholder">What happens in the world (the actual trial)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pv-caption">
+                  <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+                  <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+                </div>
+
+                <div class="pv-see">
+                  <p class="pv-see-title">What you're seeing</p>
+                  <ul class="pv-bullets">
+                    <li>The model simulates outcomes before choosing a policy update.</li>
+                    <li>Mind vs world is a mapping between internal prediction and external behavior.</li>
+                    <li>Toggle it to connect the abstraction to the trial loop.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <div class="big-idea">
+                <h3 class="big-idea-title">FLOW DIAGRAM</h3>
+                <p class="big-idea-text">Add a flow diagram here (or keep this placeholder): Sample -> Simulate -> Update.</p>
+              </div>
+            </div>
+          </details>
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Why important: This directly shows the experimental procedure, so readers can "see" the trial.</p>
+            <p class="insight-text">This section groups what you did (method) and how you explain behavior (model) so readers can connect procedure → prediction.</p>
           </aside>
         </div>
       </section>
 
-      <!-- PAGE 5: MODEL -->
-      <section class="page page--paper" id="model" data-page="4" tabindex="-1" aria-hidden="true">
-        <div class="page-inner">
-          <header class="page-head">
-            <h2 class="page-title">Model (SSUP)</h2>
-            <p class="page-dek">How internal simulation and policy updating work.</p>
-          </header>
-
-          <h3 class="subhead">3 STEPS</h3>
-          <p class="prose">Sample, simulate, update. Explain how the internal steps map to behavior.</p>
-
-          <article class="pv-block" id="pv-fig4bc" data-fig="Fig. 4B+4C" data-interaction="mode">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 4B+4C</span>
-                <span class="pv-figname">Internal thinking: mind vs world</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
-
-            <div class="pv-visual">
-              <div class="pv-mode">
-                <div class="pv-mode-controls" role="tablist" aria-label="SSUP representation mode">
-                  <button class="pv-mode-btn is-active" type="button" data-mode="mind">In the mind</button>
-                  <button class="pv-mode-btn" type="button" data-mode="world">In the world</button>
-                </div>
-                <div class="pv-mode-visual" aria-label="Mode visual placeholder">
-                  <div class="pv-mode-layer" data-mode-layer="mind">
-                    <div class="pv-visual-placeholder">A simulated scene in the mind (internal rollout)</div>
-                  </div>
-                  <div class="pv-mode-layer" data-mode-layer="world" hidden>
-                    <div class="pv-visual-placeholder">What happens in the world (the actual trial)</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
-
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
-              <ul class="pv-bullets">
-                <li>The model simulates outcomes before choosing a policy update.</li>
-                <li>Mind vs world is a mapping between internal prediction and external behavior.</li>
-                <li>Toggle it to connect the abstraction to the trial loop.</li>
-              </ul>
-            </div>
-          </article>
-
-          <div class="big-idea">
-            <h3 class="big-idea-title">FLOW DIAGRAM</h3>
-            <p class="big-idea-text">Add a flow diagram here (or keep this placeholder): Sample -> Simulate -> Update.</p>
-          </div>
-
-          <aside class="insight-box">
-            <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Interaction: toggle "In the mind" vs "In the world" to see how internal simulation supports real-world choices.</p>
-          </aside>
-        </div>
-      </section>
-
-      <!-- PAGE 6: RESULTS -->
-      <section class="page page--paper" id="results" data-page="5" tabindex="-1" aria-hidden="true">
+      <!-- PAGE 5: RESULTS (RESULTS + INTERPRETATION) -->
+      <section class="page page--paper" id="results" data-page="4" tabindex="-1" aria-hidden="true">
         <div class="page-inner">
           <header class="page-head">
             <h2 class="page-title">Results</h2>
-            <p class="page-dek">Main findings in words plus visuals you can reason about.</p>
+            <p class="page-dek">Results and interpretation together, with scrollable expandable sections.</p>
           </header>
 
-          <h3 class="subhead">KEY STATS</h3>
-          <p class="prose">Write the headline pattern first: who beats who, under what condition, and why it matters.</p>
+          <nav class="vnav" aria-label="Results navigation">
+            <a class="vnav-link" href="#res-findings">Key findings</a>
+            <a class="vnav-link" href="#res-meaning">Interpretation</a>
+          </nav>
+
+          <details class="drop" open>
+            <summary class="drop-summary" id="res-findings">Key findings</summary>
+            <div class="drop-body">
+              <h3 class="subhead">KEY STATS</h3>
+              <p class="prose">Write the headline pattern first: who beats who, under what condition, and why it matters.</p>
 
           <article class="pv-block" id="pv-fig5ab" data-fig="Fig. 5A+5B" data-interaction="resultsOverlay">
             <div class="pv-top">
@@ -538,19 +567,13 @@
             <h3 class="insight-title">INSIGHT BOX</h3>
             <p class="insight-text">Toggle overlays so you can explain the direction and speed of learning in plain language.</p>
           </aside>
-        </div>
-      </section>
-
-      <!-- PAGE 7: INTERPRETATION -->
-      <section class="page page--paper" id="interpretation" data-page="6" tabindex="-1" aria-hidden="true">
-        <div class="page-inner">
-          <header class="page-head">
-            <h2 class="page-title">Interpretation</h2>
-            <p class="page-dek">What the findings mean and where to look next.</p>
-          </header>
-
-          <h3 class="subhead">TAKEAWAYS</h3>
-          <p class="prose">Write 2-4 takeaways that tie directly back to your hypotheses.</p>
+            </div>
+          </details>
+          <details class="drop" open>
+            <summary class="drop-summary" id="res-meaning">Interpretation</summary>
+            <div class="drop-body">
+              <h3 class="subhead">TAKEAWAYS</h3>
+              <p class="prose">Write 2-4 takeaways that tie directly back to your hypotheses.</p>
 
           <article class="pv-block" id="pv-fig6b" data-fig="Fig. 6B" data-interaction="clusters">
             <div class="pv-top">
@@ -592,16 +615,27 @@
             <h3 class="insight-title">INSIGHT BOX</h3>
             <p class="insight-text">Interaction: hover clusters to see behavior differences and tie them to the authors' interpretation.</p>
           </aside>
+            </div>
+          </details>
         </div>
       </section>
 
-      <!-- PAGE 8: LIMITATIONS -->
-      <section class="page page--paper" id="limitations" data-page="7" tabindex="-1" aria-hidden="true">
+      <!-- PAGE 7: LIMITATIONS (LIMITATIONS + CONCLUSION) -->
+      <section class="page page--paper" id="limitations" data-page="5" tabindex="-1" aria-hidden="true">
         <div class="page-inner">
           <header class="page-head">
             <h2 class="page-title">Limitations</h2>
-            <p class="page-dek">Strengths and weaknesses, rigor, and what questions remain.</p>
+            <p class="page-dek">Limitations + take-home message in one page.</p>
           </header>
+
+          <nav class="vnav" aria-label="Limitations navigation">
+            <a class="vnav-link" href="#lim-issues">Limitations</a>
+            <a class="vnav-link" href="#lim-takehome">Take-home</a>
+          </nav>
+
+          <details class="drop" open>
+            <summary class="drop-summary" id="lim-issues">Limitations</summary>
+            <div class="drop-body">
 
           <article class="pv-block" id="pv-fig8" data-fig="Fig. 8" data-interaction="limitationsDemo">
             <div class="pv-top">
@@ -643,11 +677,13 @@
 
           <h3 class="subhead">TAKE HOME</h3>
           <p class="prose">In 1-2 sentences: what should someone remember, and what does it imply about tool-use cognition?</p>
+            </div>
+          </details>
         </div>
       </section>
 
-      <!-- PAGE 9: FUTURE -->
-      <section class="page page--paper" id="future" data-page="8" tabindex="-1" aria-hidden="true">
+      <!-- PAGE 6: FUTURE -->
+      <section class="page page--paper" id="future" data-page="6" tabindex="-1" aria-hidden="true">
         <div class="page-inner">
           <header class="page-head">
             <h2 class="page-title">Future directions</h2>
@@ -700,39 +736,33 @@
             <h3 class="insight-title">INSIGHT BOX</h3>
             <p class="insight-text">Use this interactive grid as your concrete "next steps" section. Replace each label with the paper's level names.</p>
           </aside>
-        </div>
-      </section>
+          <details class="drop">
+            <summary class="drop-summary" id="lim-takehome">Take-home</summary>
+            <div class="drop-body">
+              <h3 class="subhead">FINAL STATEMENT</h3>
+              <p class="prose">In 2-4 sentences: what should be true about cognition after reading this paper?</p>
 
-      <!-- PAGE 10: CONCLUSION -->
-      <section class="page page--paper" id="conclusion" data-page="9" tabindex="-1" aria-hidden="true">
-        <div class="page-inner">
-          <header class="page-head">
-            <h2 class="page-title">Conclusion</h2>
-            <p class="page-dek">Take-home message and why your reader should care.</p>
-          </header>
+              <div class="recap-block" aria-label="Visual recap: Sample, Simulate, Update">
+                <div class="recap-step">
+                  <div class="recap-icon">Sample</div>
+                  <div class="recap-arrow">→</div>
+                </div>
+                <div class="recap-step">
+                  <div class="recap-icon">Simulate</div>
+                  <div class="recap-arrow">→</div>
+                </div>
+                <div class="recap-step">
+                  <div class="recap-icon recap-icon--accent">Update</div>
+                </div>
+              </div>
 
-          <h3 class="subhead">FINAL STATEMENT</h3>
-          <p class="prose">In 2-4 sentences: what should be true about cognition after reading this paper?</p>
-
-          <div class="recap-block" aria-label="Visual recap: Sample, Simulate, Update">
-            <div class="recap-step">
-              <div class="recap-icon">Sample</div>
-              <div class="recap-arrow">→</div>
+              <aside class="insight-box">
+                <h3 class="insight-title">INSIGHT BOX</h3>
+                <p class="insight-text">CTA: Replace this button with what you need (copy link, export notes, etc.).</p>
+                <button type="button" class="cta-btn" id="cta-copy-takeaway">Copy your take-home (placeholder)</button>
+              </aside>
             </div>
-            <div class="recap-step">
-              <div class="recap-icon">Simulate</div>
-              <div class="recap-arrow">→</div>
-            </div>
-            <div class="recap-step">
-              <div class="recap-icon recap-icon--accent">Update</div>
-            </div>
-          </div>
-
-          <aside class="insight-box">
-            <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">CTA: Replace this button with what you need (copy link, export notes, etc.).</p>
-            <button type="button" class="cta-btn" id="cta-copy-takeaway">Copy your take-home (placeholder)</button>
-          </aside>
+          </details>
         </div>
       </section>
     </main>
