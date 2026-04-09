@@ -162,10 +162,10 @@
             </div>
 
             <div class="pv-split">
-              <div class="pv-split-left">
+                <div class="pv-split-left">
                 <div class="pv-visual">
                   <div class="pv-levels">
-                    <div class="pv-level-grid" aria-label="20 levels">
+                  <div class="pv-level-grid" aria-label="20 levels">
                   <button class="pv-level" type="button" data-detail="Catapult: shoots an object to reach the goal.">1</button>
                   <button class="pv-level" type="button" data-detail="Bridge: re-routes a path for success.">2</button>
                   <button class="pv-level" type="button" data-detail="Lever: uses force and pivoting.">3</button>
@@ -183,14 +183,14 @@
                   <button class="pv-level" type="button" data-detail="Stack: uses position and stability.">15</button>
                   <button class="pv-level" type="button" data-detail="Wedge: redirects with angled surfaces.">16</button>
                   <button class="pv-level" type="button" data-detail="Launcher: boosts objects over obstacles.">17</button>
-                  <button class="pv-level" type="button" data-detail="Pivot: rotates the tool for alignment.">18</button>
-                  <button class="pv-level" type="button" data-detail="Spring: stores and releases energy.">19</button>
-                  <button class="pv-level" type="button" data-detail="Tether: connects objects with constraints.">20</button>
-                    </div>
+                  <button class="pv-level" type="button" data-detail="Springboard: launches objects with stored energy.">18</button>
+                  <button class="pv-level" type="button" data-detail="Bridge ramp: combines height and path to cross together.">19</button>
+                  <button class="pv-level" type="button" data-detail="Barrier: changes the route by blocking part of the scene.">20</button>
+
                   </div>
                 </div>
               </div>
-
+              </div>
               <div class="pv-split-right">
                 <div class="pv-level-detail" aria-live="polite">Hover a level to see what kind of physical problem it represents.</div>
 
@@ -234,6 +234,38 @@
 
           <h3 class="subhead">HYPOTHESIS</h3>
           <p class="prose">Humans and models can solve by sampling possible actions, simulating outcomes, and then updating a policy.</p>
+
+          <article class="pv-block" id="pv-figb" data-fig="Fig. B" data-interaction="staticFigure">
+            <div class="pv-top">
+              <div class="pv-figmeta">
+                <span class="pv-figlabel">Fig. B</span>
+                <span class="pv-figname">Sampling, simulation, and updating across mind and world</span>
+              </div>
+              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
+            </div>
+
+            <div class="pv-visual">
+              <figure class="pv-image-figure">
+                <div class="pv-image-frame">
+                  <img class="pv-image" src="figure/Fig%20B.png" alt="Figure B showing a sample, simulate, update cycle in the mind and its action in the world." />
+                </div>
+              </figure>
+            </div>
+
+            <div class="pv-caption">
+              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
+              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            </div>
+
+            <div class="pv-see">
+              <p class="pv-see-title">What you're seeing</p>
+              <ul class="pv-bullets">
+                <li>The model cycles through sampling, simulation, and belief updating.</li>
+                <li>Internal reasoning links directly to action in the physical world.</li>
+                <li>Use this figure to explain the core computation behind the paper's hypothesis.</li>
+              </ul>
+            </div>
+          </article>
 
           <article class="pv-block" id="pv-fig4a" data-fig="Fig. 4A" data-interaction="ssup">
             <div class="pv-top">
@@ -442,54 +474,34 @@
             <div class="pv-visual">
               <div class="pv-results">
                 <div class="pv-results-controls" role="tablist" aria-label="Results overlay mode">
-                  <button class="pv-view-btn" type="button" data-view="both">Both</button>
-                  <button class="pv-view-btn is-active" type="button" data-view="human">Human only</button>
-                  <button class="pv-view-btn" type="button" data-view="model">Model only</button>
+                  <button class="pv-view-btn is-active" type="button" data-view="human">Human</button>
+                  <button class="pv-view-btn" type="button" data-view="model">Model</button>
+                  <button class="pv-view-btn" type="button" data-view="validation">Validation</button>
                 </div>
 
-                <div class="pv-results-visual" aria-label="Overlay visual placeholder">
+                <div class="pv-results-visual" aria-label="Current figure image panels">
                   <div class="pv-results-overlay" data-view="human">
-                    <div class="pv-meter">
-                      <div class="pv-meter-row">
-                        <span class="pv-meter-label">Attempts</span>
-                        <span class="pv-meter-num">[H value]</span>
+                    <figure class="pv-image-figure">
+                      <div class="pv-image-frame pv-image-frame--results">
+                        <img class="pv-image" src="figure/Fig%206A.png" alt="Figure 6A showing cumulative solutions over attempts across multiple tasks." />
                       </div>
-                      <div class="pv-meter-track"><div class="pv-meter-fill" style="--w:72%"></div></div>
-                      <div class="pv-meter-row">
-                        <span class="pv-meter-label">Accuracy</span>
-                        <span class="pv-meter-num">[H value]</span>
-                      </div>
-                      <div class="pv-meter-track"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:64%"></div></div>
-                    </div>
+                    </figure>
                   </div>
 
                   <div class="pv-results-overlay" data-view="model" hidden>
-                    <div class="pv-meter">
-                      <div class="pv-meter-row">
-                        <span class="pv-meter-label">Attempts</span>
-                        <span class="pv-meter-num">[M value]</span>
+                    <figure class="pv-image-figure">
+                      <div class="pv-image-frame pv-image-frame--results">
+                        <img class="pv-image" src="figure/Fig%205AB.png" alt="Figure 5A and 5B comparing human and full model attempts and accuracy across tasks." />
                       </div>
-                      <div class="pv-meter-track"><div class="pv-meter-fill" style="--w:80%"></div></div>
-                      <div class="pv-meter-row">
-                        <span class="pv-meter-label">Accuracy</span>
-                        <span class="pv-meter-num">[M value]</span>
-                      </div>
-                      <div class="pv-meter-track"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:74%"></div></div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="pv-results-overlay" data-view="both" hidden>
-                    <div class="pv-comparison">
-                      <div class="pv-comp-col">
-                        <div class="pv-comp-title">Human</div>
-                        <div class="pv-meter-track small"><div class="pv-meter-fill" style="--w:72%"></div></div>
+                  <div class="pv-results-overlay" data-view="validation" hidden>
+                    <figure class="pv-image-figure">
+                      <div class="pv-image-frame pv-image-frame--results">
+                        <img class="pv-image" src="figure/Fig%207CD.png" alt="Figure 7C and 7D comparing validation attempts and accuracy for humans and the full model." />
                       </div>
-                      <div class="pv-comp-col">
-                        <div class="pv-comp-title">Model</div>
-                        <div class="pv-meter-track small"><div class="pv-meter-fill pv-meter-fill--accent" style="--w:74%"></div></div>
-                      </div>
-                    </div>
-                    <p class="pv-inline-note">Replace values and interpret the direction of effects.</p>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -503,9 +515,9 @@
             <div class="pv-see">
               <p class="pv-see-title">What you're seeing</p>
               <ul class="pv-bullets">
-                <li>Attempts and accuracy summarize overall performance.</li>
-                <li>Overlay toggle helps connect model vs human.</li>
-                <li>Use this to justify your results narrative.</li>
+                <li>The human tab shows the multi-panel learning curves from Fig. 6A.</li>
+                <li>The model tab shows the Fig. 5A+5B comparison between humans and the full model.</li>
+                <li>The validation tab shows the Fig. 7C+7D validation comparison.</li>
               </ul>
             </div>
           </article>

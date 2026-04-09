@@ -1175,16 +1175,18 @@ details.drop[open] .drop-summary::after {
   overflow: hidden;
   color: rgba(255, 255, 255, 0.96);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  background-color: #ffffff;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
+  min-height: 200px;
 }
 
 .pv-tooluse-icon::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.08));
+  background: none;
 }
 
 .pv-tooluse-icon > * {
@@ -1239,13 +1241,38 @@ details.drop[open] .drop-summary::after {
   aspect-ratio: 1 / 1;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, #ffffff, var(--surface-soft));
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
   font-family: var(--font-sans);
   font-weight: 900;
-  color: var(--muted);
+  color: transparent;
+  text-shadow: none;
   transition: transform 0.12s ease, border-color 0.12s ease;
 }
+
+.pv-level:nth-child(1) { background-image: url("button assets/1.jpg"); }
+.pv-level:nth-child(2) { background-image: url("button assets/2.jpg"); }
+.pv-level:nth-child(3) { background-image: url("button assets/3.jpg"); }
+.pv-level:nth-child(4) { background-image: url("button assets/4.jpg"); }
+.pv-level:nth-child(5) { background-image: url("button assets/5.jpg"); }
+.pv-level:nth-child(6) { background-image: url("button assets/6.jpg"); }
+.pv-level:nth-child(7) { background-image: url("button assets/7.jpg"); }
+.pv-level:nth-child(8) { background-image: url("button assets/8.jpg"); }
+.pv-level:nth-child(9) { background-image: url("button assets/9.jpg"); }
+.pv-level:nth-child(10) { background-image: url("button assets/10.jpg"); }
+.pv-level:nth-child(11) { background-image: url("button assets/11.jpg"); }
+.pv-level:nth-child(12) { background-image: url("button assets/12.jpg"); }
+.pv-level:nth-child(13) { background-image: url("button assets/13.jpg"); }
+.pv-level:nth-child(14) { background-image: url("button assets/14.jpg"); }
+.pv-level:nth-child(15) { background-image: url("button assets/15.png"); }
+.pv-level:nth-child(16) { background-image: url("button assets/16.png"); }
+.pv-level:nth-child(17) { background-image: url("button assets/17.png"); }
+.pv-level:nth-child(18) { background-image: url("button assets/18.png"); }
+.pv-level:nth-child(19) { background-image: url("button assets/19.png"); }
+.pv-level:nth-child(20) { background-image: url("button assets/20.png"); }
 
 .pv-level:hover,
 .pv-level:focus-visible {
@@ -1413,6 +1440,30 @@ details.drop[open] .drop-summary::after {
   color: var(--ink-soft);
 }
 
+.pv-image-figure {
+  margin: 0;
+}
+
+.pv-image-frame {
+  border-radius: 16px;
+  border: 1px dashed rgba(107, 101, 96, 0.35);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.9rem;
+  overflow: hidden;
+}
+
+.pv-image-frame--results {
+  padding: 0.7rem;
+}
+
+.pv-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+}
+
 /* Results PV */
 .pv-results {
   display: grid;
@@ -1446,7 +1497,7 @@ details.drop[open] .drop-summary::after {
   border-radius: 16px;
   border: 1px dashed rgba(107, 101, 96, 0.35);
   background: rgba(255, 255, 255, 0.8);
-  padding: 1rem 1.1rem;
+  padding: 0.7rem;
 }
 
 .pv-results-overlay.hidden {
@@ -1456,81 +1507,6 @@ details.drop[open] .drop-summary::after {
 .pv-results-visual {
   display: grid;
   gap: 0.75rem;
-}
-
-.pv-meter {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.pv-meter-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.pv-meter-label {
-  font-family: var(--font-sans);
-  font-weight: 900;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.pv-meter-num {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.pv-meter-track {
-  margin-top: 0.15rem;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(107, 101, 96, 0.15);
-  overflow: hidden;
-  margin-left: 0;
-}
-
-.pv-meter-fill {
-  height: 100%;
-  width: var(--w, 70%);
-  background: var(--accent);
-}
-
-.pv-meter-fill--accent {
-  background: var(--accent-2);
-}
-
-.pv-meter-track.small {
-  height: 8px;
-}
-
-.pv-comparison {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.pv-comp-col {
-  flex: 1;
-  border-radius: 14px;
-  border: 1px solid rgba(232, 226, 216, 0.8);
-  padding: 0.75rem 0.8rem;
-  background: #fff;
-}
-
-.pv-comp-title {
-  font-family: var(--font-sans);
-  font-weight: 900;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-
-.pv-inline-note {
-  margin: 0;
-  font-family: var(--font-serif);
-  color: var(--ink-soft);
 }
 
 /* Curves PV */
