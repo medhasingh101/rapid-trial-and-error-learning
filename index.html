@@ -116,7 +116,7 @@
             </div>
 
             
-            <div class="pv-see">
+            <div class="pv-see pv-results-panel" data-view="human">
               <p class="pv-see-title">What you're seeing</p>
               <ul class="pv-bullets">
           <li>Different <span class="gloss" tabindex="0" data-def="Here, an agent means any problem-solver (human, animal, or AI model) that chooses actions to try to reach a goal.">agents</span> solve physical problems with objects.</li>
@@ -156,8 +156,8 @@
           <article class="pv-block" id="pv-bigq" data-fig="BigQ" data-interaction="captionToggle">
             <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">In plain english</button>
             <div class="pv-caption">
-              <p class="pv-caption-translated">How do humans solve new physical problems so quickly and flexibly using tools?</p>
-              <p class="pv-caption-original" hidden>Why can people look at a completely new situation (like using a random object as a tool) and figure out a solution in just a few tries?</p>
+              <p class="pv-caption-original">How do humans solve new physical problems so quickly and flexibly using tools?</p>
+              <p class="pv-caption-translated" hidden>Why can people look at a completely new situation (like using a random object as a tool) and figure out a solution in just a few tries?</p>
             </div>
           </article>
 
@@ -399,9 +399,18 @@
                 This process helps explain how people can efficiently solve new problems with minimal trial
               </p>
 
-              <div class="big-idea">
-                <h3 class="big-idea-title">CONCEPT</h3>
-                <p class="big-idea-text">Sample -> Simulate -> Update.</p>
+              <div class="recap-block" aria-label="Visual recap: Sample, Simulate, Update">
+                <div class="recap-step">
+                  <div class="recap-icon">Sample</div>
+                  <div class="recap-arrow">→</div>
+                </div>
+                <div class="recap-step">
+                  <div class="recap-icon">Simulate</div>
+                  <div class="recap-arrow">→</div>
+                </div>
+                <div class="recap-step">
+                  <div class="recap-icon recap-icon--accent">Update</div>
+                </div>
               </div>
             </div>
           </details>
@@ -479,73 +488,58 @@
               </div>
             </div>
 
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+            <div class="pv-see pv-results-panel" data-view="human">
+              <p class="pv-see-title">Human</p>
+              <ul class="pv-bullets">
+                <li>Average success rate: 81%</li>
+                <li>Range: 31% (hardest) to 100% (easiest).</li>
+                <li>Average attempts: 4.5 per level</li>
+              </ul>
+              <p class="prose">A key finding is that even small environmental changes influenced how participants chose tools and strategies, showing sensitivity to subtle differences.</p>
+            </div>
+            
+            <div class="pv-see pv-results-panel" data-view="model" hidden>
+              <p class="pv-see-title">Model</p>
+              <ul class="pv-bullets">
+                <li>Attempts per level: strong correlation with humans (r = 0.71)</li>
+                <li>Success rates: very strong correlation (r = 0.86)</li>
+              </ul>
+              <p class="prose">The model, like humans:</p>
+              <ul class="pv-bullets">
+                <li>Tried multiple plausible strategies first</li>
+                <li>Then refined toward a solution</li>
+              </ul>
+              <p class="prose">Differences:</p>
+              <ul class="pv-bullets">
+                <li>Humans were sometimes biased toward less efficient strategies</li>
+                <li>The model often acted faster</li>
+              </ul>
             </div>
 
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
+            <div class="pv-see pv-results-panel" data-view="validation" hidden>
+              <p class="pv-see-title">Validation</p>
               <ul class="pv-bullets">
-                <li>The human tab shows the multi-panel learning curves from Fig. 6A.</li>
-                <li>The model tab shows the Fig. 5A+5B comparison between humans and the full model.</li>
-                <li>The validation tab shows the Fig. 7C+7D validation comparison.</li>
+                <li>Attempts: r = 0.85</li>
+                <li>Accuracy: r = 0.95 → SSUP continued to match human performance well on new levels</li>
+              </ul>
+              <p class="prose">The model, like humans:</p>
+              <ul class="pv-bullets">
+                <li>Tried multiple plausible strategies first</li>
+                <li>Then refined toward a solution</li>
+              </ul>
+              <p class="prose">Differences:</p>
+              <ul class="pv-bullets">
+                <li>Humans were sometimes biased toward less efficient strategies</li>
+                <li>The model often acted faster</li>
               </ul>
             </div>
           </article>
 
-          <article class="pv-block" id="pv-fig6a" data-fig="Fig. 6A" data-interaction="curves">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 6A</span>
-                <span class="pv-figname">Learning curves over attempts</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
-
-            <div class="pv-visual">
-              <div class="pv-curves" role="img" aria-label="Placeholder learning curves chart">
-                <div class="pv-curves-controls" role="tablist" aria-label="Curve visibility">
-                  <button class="pv-view-btn is-active" type="button" data-curves="both">Both</button>
-                  <button class="pv-view-btn" type="button" data-curves="human">Human</button>
-                  <button class="pv-view-btn" type="button" data-curves="model">Model</button>
-                </div>
-                <svg class="pv-chart" viewBox="0 0 520 240" aria-label="Learning curve chart placeholder">
-                  <line x1="60" y1="200" x2="500" y2="200" stroke="var(--line)" stroke-width="2" />
-                  <line x1="60" y1="40" x2="60" y2="200" stroke="var(--line)" stroke-width="2" />
-                  <text x="70" y="215" font-size="12" fill="var(--muted)">Attempts</text>
-                  <text x="10" y="60" font-size="12" fill="var(--muted)" transform="rotate(-90 10 60)">Performance</text>
-
-                  <polyline class="pv-curve pv-curve--human" data-curve="human" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="80,170 130,150 180,140 230,120 280,105 330,95 380,88 430,82 470,76" />
-                  <polyline class="pv-curve pv-curve--model" data-curve="model" fill="none" stroke="var(--accent-2)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="80,180 130,165 180,155 230,135 280,120 330,110 380,100 430,92 470,85" />
-                  <circle cx="230" cy="120" r="6" fill="var(--accent)" />
-                  <circle cx="280" cy="120" r="6" fill="var(--accent-2)" opacity="0.0001" />
-                </svg>
-                <div class="pv-legend">
-                  <span class="pv-legend-item"><span class="pv-dot pv-dot--human"></span> Human</span>
-                  <span class="pv-legend-item"><span class="pv-dot pv-dot--model"></span> Model</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
-
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
-              <ul class="pv-bullets">
-                <li>Performance changes over repeated attempts.</li>
-                <li>Compare curve shapes to infer learning dynamics.</li>
-                <li>Use the plot to support your hypothesis.</li>
-              </ul>
-            </div>
-          </article>
+          
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Toggle overlays so you can explain the direction and speed of learning in plain language.</p>
+            <p class="insight-text">The strong alignment between humans and the model—across both original and new tasks—suggests that human problem solving follows a consistent and generalizable process. This provides evidence that complex behavior can be explained by simple underlying mechanisms.</p>
           </aside>
             </div>
           </details>
@@ -553,46 +547,36 @@
             <summary class="drop-summary" id="res-meaning">Discussion</summary>
             <div class="drop-body">
               <h3 class="subhead">TAKEAWAYS</h3>
-              <p class="prose">Write 2-4 takeaways that tie directly back to your hypotheses.</p>
-
-          <article class="pv-block" id="pv-fig4a" data-fig="Fig. 4A" data-interaction="ssup">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 4A</span>
-                <span class="pv-figname">SSUP algorithm overview</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
-
-            <div class="pv-visual">
-              <div class="pv-ssup">
-                <div class="pv-ssup-steps" role="tablist" aria-label="SSUP steps">
-                  <button class="pv-ssup-step is-active" type="button" data-detail="Sample: generate candidate tool placements or actions to consider.">Sample</button>
-                  <button class="pv-ssup-step" type="button" data-detail="Simulate: predict what would happen if each candidate action is tried.">Simulate</button>
-                  <button class="pv-ssup-step" type="button" data-detail="Update: revise preferences/policy based on success and failure.">Update</button>
-                </div>
-                <div class="pv-ssup-detail" aria-live="polite">Sample: generate candidate tool placements or actions to consider.</div>
-              </div>
-            </div>
-
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
-
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
+              <p class="pv-see-title"></p>
+              <p class="prose">The authors interpret these findings to mean that human problem solving relies on:
               <ul class="pv-bullets">
-                <li>A three-step computational recipe.</li>
-                <li>Sample-and-simulate supports flexible reasoning.</li>
-                <li>Update turns experience into future choices.</li>
+                <li>Internal knowledge of how the world works</li>
+                <li>Structured trial-and-error rather than random guessing</li>
               </ul>
-            </div>
-          </article>
+              </p>
+              <p class="prose">They propose the SSUP model (Sample, Simulate, Update):</p>
+              <ul class="pv-bullets">
+                <li>Sample: choose plausible actions based on prior knowledge</li>
+                <li>Simulate: mentally test outcomes using intuitive physics</li>
+                <li>Update: learn from both imagined and real outcomes</li>
+                         
+              </ul>
+              <p class="prose">This is important because it shows that human intelligence combines prior knowledge, simulation, and rapid learning.
+              </p>
+              
+
+              <p class="prose">Implications:</p>
+              <ul class="pv-bullets">
+                <li>Helps explain human cognition and tool use</li>
+                <li>Suggests AI should use model-based approaches rather than pure trial-and-error learning</li>
+                <li>Bridges cognitive science and artificial intelligence.</li>
+              </ul>
+
+          
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Click each part: Sample, Simulate, Update. This makes the paper's logic feel like an actual process.</p>
+            <p class="insight-text">This work shows that human intelligence emerges from a structured combination of prior knowledge, simulation, and learning. By demonstrating that this process can be modeled, it not only explains human cognition but also points toward more efficient and adaptable approaches to artificial intelligence.</p>
           </aside>
             </div>
           </details>
@@ -615,47 +599,31 @@
           <details class="drop" open>
             <summary class="drop-summary" id="lim-issues">Limitations</summary>
             <div class="drop-body">
-
-          <article class="pv-block" id="pv-fig8" data-fig="Fig. 8" data-interaction="limitationsDemo">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 8</span>
-                <span class="pv-figname">Where the model fails</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
-
-            <div class="pv-visual">
-              <div class="pv-demo">
-                <div class="pv-visual-placeholder" data-hint="Replace with your paper's failure-case visual."> </div>
-                <button type="button" class="pv-demo-btn" data-pv-demo-toggle>Run demo: show failure cases</button>
-                <div class="pv-demo-reveal" hidden>
-                  <ul class="pv-bullets">
-                    <li>Failure case 1: model mispredicts a key physical constraint.</li>
-                    <li>Failure case 2: incorrect tool placement leads to systematic error.</li>
-                    <li>Failure case 3: evidence suggests an alternative strategy.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
-
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
+              <p class="pv-see-title">STRENGTHS</p>
+              <p class="prose">
               <ul class="pv-bullets">
-                <li>Some situations are outside the model's assumptions.</li>
-                <li>Discuss why these failures matter for rigor.</li>
-                <li>Use the take-home to set future directions.</li>
+                <li>Strong experimental design with controlled virtual environment</li>
+                <li>Combines human data with computational modeling</li>
+                <li>Model closely matches human behavior</li>
+                <li>Includes validation with new participants and levels</li>
               </ul>
-            </div>
-          </article>
-
-          <h3 class="subhead">TAKE HOME</h3>
-          <p class="prose">In 1-2 sentences: what should someone remember, and what does it imply about tool-use cognition?</p>
+              </p>
+              <p class="pv-see-title">LIMITATIONS</p>
+              <p class="prose">
+              <ul class="pv-bullets">
+                <li>SSUP has overly simple prior knowledge compared to humans</li>
+                <li>Cannot plan backward (only forward: Step A → Step B → Goal)</li>
+                <li>Model closely matches human behavior</li>
+                <li>Lacks other human abilities such as:
+                  <ul class="pv-bullets">
+                    <li>Motor skills</li>
+                    <li>Semantic knowledge of tools</li>
+                    <li>Real-world experience</li>
+                  </ul>
+                </li>
+              </ul>
+              </p>
+              
             </div>
           </details>
         </div>
@@ -666,60 +634,33 @@
         <div class="page-inner">
           <header class="page-head">
             <h2 class="page-title">Future directions</h2>
+
             <p class="page-dek">Specific next steps that follow from the limitations.</p>
-          </header>
 
-          <article class="pv-block" id="pv-fig7a" data-fig="Fig. 7A" data-interaction="futureFilter">
-            <div class="pv-top">
-              <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. 7A</span>
-                <span class="pv-figname">New levels (validation)</span>
-              </div>
-              <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-            </div>
-
-            <div class="pv-visual">
-              <div class="pv-future">
-                <div class="pv-future-controls" role="tablist" aria-label="Future filter">
-                  <button class="pv-future-btn is-active" type="button" data-filter="all">All</button>
-                  <button class="pv-future-btn" type="button" data-filter="training">Training</button>
-                  <button class="pv-future-btn" type="button" data-filter="validation">Validation</button>
-                </div>
-                <div class="pv-level-grid pv-level-grid--future" aria-label="Validation levels grid">
-                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: helps learn priors.">T1</button>
-                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: tests generalization.">V1</button>
-                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: calibrates simulation.">T2</button>
-                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: checks if updates transfer.">V2</button>
-                  <button class="pv-future-item" type="button" data-filter-tags="training" data-detail="Training level: strengthens tool-use heuristics.">T3</button>
-                  <button class="pv-future-item" type="button" data-filter-tags="validation" data-detail="Validation level: reveals edge cases.">V3</button>
-                </div>
-                <div class="pv-future-detail" aria-live="polite">Select an item to see what it validates.</div>
-              </div>
-            </div>
-
-            <div class="pv-caption">
-              <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-              <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-            </div>
-
-            <div class="pv-see">
-              <p class="pv-see-title">What you're seeing</p>
+            <p class="pv-see-title pv-see-title--spaced"></p>
+              <p class="prose">
               <ul class="pv-bullets">
-                <li>Validation levels test whether learning transfers.</li>
-                <li>New levels help show robustness and generality.</li>
+                <li>Improve priors to be more context-dependent</li>
+                <li>Add backward planning (goal → steps)</li>
+                <li>Study how humans update their internal physics models</li>
+                <li>Explore how people create and transmit new tools</li>
               </ul>
-            </div>
-          </article>
+              </p>
+          </header>
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Use this interactive grid as your concrete "next steps" section. Replace each label with the paper's level names.</p>
+            <p class="insight-text">The limitations of the current model reveal that human problem solving involves more than what has been captured so far. Addressing these gaps is crucial not only for refining theories of cognition, but also for advancing AI toward more general, adaptable intelligence.
+
+            </p>
           </aside>
+
           <details class="drop">
             <summary class="drop-summary" id="lim-takehome">Take-home</summary>
             <div class="drop-body">
               <h3 class="subhead">FINAL STATEMENT</h3>
-              <p class="prose">In 2-4 sentences: what should be true about cognition after reading this paper?</p>
+              <p class="prose">Humans solve physical problems efficiently by combining mental simulation, structured prior knowledge, and rapid learning from failure and the SSUP model captures this process, but only as a simplified version of human cognition.
+              </p>
 
               <div class="recap-block" aria-label="Visual recap: Sample, Simulate, Update">
                 <div class="recap-step">
@@ -735,11 +676,6 @@
                 </div>
               </div>
 
-              <aside class="insight-box">
-                <h3 class="insight-title">INSIGHT BOX</h3>
-                <p class="insight-text">CTA: Replace this button with what you need (copy link, export notes, etc.).</p>
-                <button type="button" class="cta-btn" id="cta-copy-takeaway">Copy your take-home (placeholder)</button>
-              </aside>
             </div>
           </details>
         </div>

@@ -355,6 +355,7 @@
     // Results overlays + key stats overlays
     document.querySelectorAll(".pv-block .pv-results").forEach(function (block) {
       var viewBtns = block.querySelectorAll(".pv-view-btn[data-view]");
+      var pvBlock = block.closest(".pv-block");
       viewBtns.forEach(function (btn) {
         btn.addEventListener("click", function () {
           var view = btn.getAttribute("data-view");
@@ -366,6 +367,13 @@
           overlays.forEach(function (ov) {
             ov.hidden = ov.getAttribute("data-view") !== view;
           });
+
+          if (pvBlock) {
+            var panels = pvBlock.querySelectorAll(".pv-results-panel[data-view]");
+            panels.forEach(function (panel) {
+              panel.hidden = panel.getAttribute("data-view") !== view;
+            });
+          }
         });
       });
     });
