@@ -923,6 +923,10 @@ details.drop {
   overflow: hidden;
 }
 
+.drop + .drop {
+  margin-top: 0.7rem;
+}
+
 .drop-summary {
   list-style: none;
   cursor: pointer;
@@ -953,6 +957,10 @@ details.drop[open] .drop-summary::after {
 
 .drop-body {
   padding: 0 1rem 1rem;
+}
+
+.drop-body > :last-child {
+  margin-bottom: 0;
 }
 
 /* Hover glossary */
@@ -1090,6 +1098,10 @@ details.drop[open] .drop-summary::after {
   color: var(--muted);
 }
 
+.pv-block > .pv-toggle-original {
+  margin: 1rem 1.15rem 0;
+}
+
 .pv-toggle-original:hover {
   border-color: rgba(13, 148, 136, 0.45);
 }
@@ -1098,8 +1110,16 @@ details.drop[open] .drop-summary::after {
   padding: 1rem 1.15rem;
 }
 
+.pv-copy {
+  padding: 0 1.15rem 1.15rem;
+}
+
 .pv-caption {
   padding: 0.1rem 1.15rem 1rem;
+}
+
+.pv-copy .pv-caption {
+  padding: 0.1rem 0 0;
 }
 
 .pv-caption-translated {
@@ -1122,6 +1142,14 @@ details.drop[open] .drop-summary::after {
   padding: 0 1.15rem 1.15rem;
 }
 
+.pv-copy .pv-see {
+  padding: 0;
+}
+
+.pv-see--spaced {
+  margin-top: 1rem;
+}
+
 .pv-see-title {
   margin: 0 0 0.4rem;
   font-family: var(--font-sans);
@@ -1134,7 +1162,7 @@ details.drop[open] .drop-summary::after {
 
 .pv-bullets {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 1.1rem;
   color: var(--ink-soft);
 }
 
@@ -1253,6 +1281,22 @@ details.drop[open] .drop-summary::after {
   transition: transform 0.12s ease, border-color 0.12s ease;
 }
 
+.pv-level-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
 .pv-level:nth-child(1) { background-image: url("button assets/1.jpg"); }
 .pv-level:nth-child(2) { background-image: url("button assets/2.jpg"); }
 .pv-level:nth-child(3) { background-image: url("button assets/3.jpg"); }
@@ -1281,6 +1325,14 @@ details.drop[open] .drop-summary::after {
   border-color: rgba(13, 148, 136, 0.55);
 }
 
+.pv-level-image:hover,
+.pv-level-image:focus-visible {
+  outline: none;
+  transform: translateY(-2px);
+  border-color: rgba(13, 148, 136, 0.55);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.12);
+}
+
 .pv-level-detail {
   margin-top: 0.75rem;
   border-radius: 14px;
@@ -1291,6 +1343,31 @@ details.drop[open] .drop-summary::after {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--ink-soft);
+}
+
+.pv-play-link-wrap {
+  margin: 0.1rem 0 0.9rem;
+}
+
+.pv-play-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pv-play-link:hover,
+.pv-play-link:focus-visible {
+  outline: none;
+  border-color: rgba(13, 148, 136, 0.55);
+  color: var(--accent);
 }
 
 /* SSUP PV */

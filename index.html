@@ -147,17 +147,23 @@
             <p class="page-dek">The problem, the knowledge gap, and why this question is interesting.</p>
           </header>
 
-          <h3 class="subhead">PROBLEM</h3>
-          <p class="prose">
-            What do people still not fully understand about how tool-use problems are learned and represented in the brain?
-          </p>
-
           <h3 class="subhead">KNOWLEDGE GAP</h3>
-          <p class="prose">Summarize what is unknown or contested, and exactly how this study tries to close the gap.</p>
+          <p class="prose">Previous research shows that only a few animals (such as primates and certain birds) demonstrate flexible tool use, while humans can solve novel tool problems as early as age 4.</p>
+          <p class="prose">There is also research on AI, which shows key limitations: AI often requires large amounts of training data, relies on demonstrations, or depends on highly precise physics knowledge (e.g., force, motion, causality).</p>
+          <p class="prose">The main research gap is that no current AI matches human-like flexible reasoning in physical problem solving.</p>
+          
+          <h3 class="subhead">BIG PICTRUE QUESTION</h3>
+          <article class="pv-block" id="pv-bigq" data-fig="BigQ" data-interaction="captionToggle">
+            <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">In plain english</button>
+            <div class="pv-caption">
+              <p class="pv-caption-translated">How do humans solve new physical problems so quickly and flexibly using tools?</p>
+              <p class="pv-caption-original" hidden>Why can people look at a completely new situation (like using a random object as a tool) and figure out a solution in just a few tries?</p>
+            </div>
+          </article>
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Interaction: hover over each level to make the idea of "many different physical problems" feel concrete.</p>
+            <p class="insight-text">This study addresses a key gap between human and artificial intelligence: humans can adapt to new physical problems almost instantly, while AI cannot. Explaining this difference is crucial for understanding human cognition and improving intelligent systems.</p>
           </aside>
         </div>
       </section>
@@ -170,16 +176,22 @@
             <p class="page-dek">How the questions arise from the big picture and previous research.</p>
           </header>
 
-          <h3 class="subhead">QUESTION</h3>
-          <p class="prose">What cognitive computation lets people choose tools that work on new physical setups?</p>
+          <h3 class="subhead">MAIN RESEARCH QUESTION</h3>
+          <p class="prose">How do humans solve new physical problems quickly and flexibly using tools?</p>
+
+          <h3 class="subhead">SUB - QUESTIONS</h3>
+          <p class="prose">
+            <ul class="pv-bullets">
+                    <li>What cognitive processes allow humans to repurpose objects (e.g., using a rock as a hammer)?</li>
+                    <li>How can this be computationally modeled?</li>
+            </ul>
+          </p>
 
           <h3 class="subhead">HYPOTHESIS</h3>
-          <p class="prose">Humans and models can solve by sampling possible actions, simulating outcomes, and then updating a policy.</p>
-
           <article class="pv-block" id="pv-figb" data-fig="Fig. B" data-interaction="staticFigure">
             <div class="pv-top">
               <div class="pv-figmeta">
-                <span class="pv-figlabel">Fig. B</span>
+                <span class="pv-figlabel">Fig. B Allen et. al</span>
                 <span class="pv-figname">Sampling, simulation, and updating across mind and world</span>
               
 
@@ -198,7 +210,9 @@
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">Click each part: Sample, Simulate, Update. This makes the paper's logic feel like an actual process.</p>
+            <p class="insight-text">
+              This research question breaks down a complex ability—human problem solving—into specific processes that can be tested. Instead of just asking what humans do, it asks how they do it, making it possible to model and compare human thinking with AI systems.
+            </p>
           </aside>
         </div>
       </section>
@@ -218,11 +232,22 @@
             <a class="vnav-link" href="#sd-model">Model (SSUP)</a>
           </nav>
 
-          <details class="drop" open>
+          <details class="drop">
             <summary class="drop-summary" id="sd-method">Method</summary>
             <div class="drop-body">
-              <h3 class="subhead">GAME EXPLANATION</h3>
-              <p class="prose">Describe the tool-use game: goal, actions, and what counts as success.</p>
+              <h3 class="subhead">TASK</h3>
+              <p class="prose">Participants interacted with a virtual tools game designed to test physical reasoning.</p>
+
+              <h3 class="subhead">GAME SET UP</h3>
+              <p class="prose">
+                <ul class="pv-bullets">
+                  <li>A 2D physics environment</li>
+                  <li>A red object</li>
+                  <li>A green goal area</li>
+                  <li>Several tools to choose from</li>
+                </ul>
+              </p>
+
 
               <article class="pv-block" id="pv-fig1d" data-fig="Fig. 1D" data-interaction="trialsteps">
                 <div class="pv-top">
@@ -236,27 +261,20 @@
                 <div class="pv-visual">
                   <div class="pv-trials">
                     <div class="pv-trial-step-grid" role="group" aria-label="Trial steps">
-                      <button class="pv-trial-step is-active" type="button" data-detail="1. Goal: identify where success should occur.">1. Goal</button>
-                      <button class="pv-trial-step" type="button" data-detail="2. Tool placement: choose and place a tool in the scene.">2. Tool placement</button>
-                      <button class="pv-trial-step" type="button" data-detail="3. Outcome: see what happened and update your strategy.">3. Outcome</button>
+                      <button class="pv-trial-step is-active" type="button" data-detail="1. Goal: Get the red object into the green goal area.">1. Goal</button>
+                      <button class="pv-trial-step" type="button" data-detail="2. Tool placement: Scan environment and tools; choose a tool; choose placement">2. Tool placement</button>
+                      <button class="pv-trial-step" type="button" data-detail="3. Outcome: Physics simulation runs automatically; Observe outcome">3. Outcome</button>
                     </div>
                     <div class="pv-trial-detail" aria-live="polite">1. Goal: identify where success should occur.</div>
                   </div>
                 </div>
 
                 <div class="pv-caption">
-                  <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-                  <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+                  <p class="pv-caption-translated">If unsuccessful: reset and try again</p>
                 </div>
 
-                <div class="pv-see">
-                  <p class="pv-see-title">What you're seeing</p>
-                  <ul class="pv-bullets">
-                    <li>Goal, tool placement, and outcome are the core trial loop.</li>
-                    <li>This structure supports measuring learning across attempts.</li>
-                    <li>It also creates a clean test for model predictions.</li>
-                  </ul>
-                </div>
+                
+
               </article>
 
               <article class="pv-block pv-block--split" id="pv-fig2" data-fig="Fig. 2" data-interaction="levels">
@@ -268,70 +286,103 @@
                   <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
                 </div>
 
-                <div class="pv-split">
-                  <div class="pv-split-left">
+                <!--<div class="pv-split">
+                  <div class="pv-split-left">-->
                     <div class="pv-visual">
-                      <div class="pv-levels">
-                        <div class="pv-level-grid" aria-label="20 levels">
-                          <button class="pv-level" type="button" data-detail="Catapult: shoots an object to reach the goal.">1</button>
-                          <button class="pv-level" type="button" data-detail="Bridge: re-routes a path for success.">2</button>
-                          <button class="pv-level" type="button" data-detail="Lever: uses force and pivoting.">3</button>
-                          <button class="pv-level" type="button" data-detail="Ramp: transforms height into motion.">4</button>
-                          <button class="pv-level" type="button" data-detail="Pulley: transfers motion between locations.">5</button>
-                          <button class="pv-level" type="button" data-detail="Wheel: redirects movement with rotation.">6</button>
-                          <button class="pv-level" type="button" data-detail="Magnet: attracts the tool or object.">7</button>
-                          <button class="pv-level" type="button" data-detail="Door: opens a new route to the goal.">8</button>
-                          <button class="pv-level" type="button" data-detail="Sling: launches using tension.">9</button>
-                          <button class="pv-level" type="button" data-detail="Gate: controls timing for a sequence.">10</button>
-                          <button class="pv-level" type="button" data-detail="Trap: blocks incorrect tool placements.">11</button>
-                          <button class="pv-level" type="button" data-detail="Conveyor: moves objects to the right time.">12</button>
-                          <button class="pv-level" type="button" data-detail="Bumper: changes direction on collision.">13</button>
-                          <button class="pv-level" type="button" data-detail="Spin: uses rotational dynamics to solve.">14</button>
-                          <button class="pv-level" type="button" data-detail="Stack: uses position and stability.">15</button>
-                          <button class="pv-level" type="button" data-detail="Wedge: redirects with angled surfaces.">16</button>
-                          <button class="pv-level" type="button" data-detail="Launcher: boosts objects over obstacles.">17</button>
-                          <button class="pv-level" type="button" data-detail="Springboard: launches objects with stored energy.">18</button>
-                          <button class="pv-level" type="button" data-detail="Bridge ramp: combines height and path to cross together.">19</button>
-                          <button class="pv-level" type="button" data-detail="Barrier: changes the route by blocking part of the scene.">20</button>
+                      <div class="pv-image-frame">
+                        <div class="pv-levels">
+                          <div class="pv-level-grid" aria-label="20 levels">
+                            <img class="pv-level-image" src="button assets/1.jpg" alt="Level 1: Catapult" tabindex="0" data-detail="Catapult: shoots an object to reach the goal." />
+                            <img class="pv-level-image" src="button assets/2.jpg" alt="Level 2: Bridge" tabindex="0" data-detail="Bridge: re-routes a path for success." />
+                            <img class="pv-level-image" src="button assets/3.jpg" alt="Level 3: Lever" tabindex="0" data-detail="Lever: uses force and pivoting." />
+                            <img class="pv-level-image" src="button assets/4.jpg" alt="Level 4: Ramp" tabindex="0" data-detail="Ramp: transforms height into motion." />
+                            <img class="pv-level-image" src="button assets/5.jpg" alt="Level 5: Pulley" tabindex="0" data-detail="Pulley: transfers motion between locations." />
+                            <img class="pv-level-image" src="button assets/6.jpg" alt="Level 6: Wheel" tabindex="0" data-detail="Wheel: redirects movement with rotation." />
+                            <img class="pv-level-image" src="button assets/7.jpg" alt="Level 7: Magnet" tabindex="0" data-detail="Magnet: attracts the tool or object." />
+                            <img class="pv-level-image" src="button assets/8.jpg" alt="Level 8: Door" tabindex="0" data-detail="Door: opens a new route to the goal." />
+                            <img class="pv-level-image" src="button assets/9.jpg" alt="Level 9: Sling" tabindex="0" data-detail="Sling: launches using tension." />
+                            <img class="pv-level-image" src="button assets/10.jpg" alt="Level 10: Gate" tabindex="0" data-detail="Gate: controls timing for a sequence." />
+                            <img class="pv-level-image" src="button assets/11.jpg" alt="Level 11: Trap" tabindex="0" data-detail="Trap: blocks incorrect tool placements." />
+                            <img class="pv-level-image" src="button assets/12.jpg" alt="Level 12: Conveyor" tabindex="0" data-detail="Conveyor: moves objects to the right time." />
+                            <img class="pv-level-image" src="button assets/13.jpg" alt="Level 13: Bumper" tabindex="0" data-detail="Bumper: changes direction on collision." />
+                            <img class="pv-level-image" src="button assets/14.jpg" alt="Level 14: Spin" tabindex="0" data-detail="Spin: uses rotational dynamics to solve." />
+                            <img class="pv-level-image" src="button assets/15.png" alt="Level 15: Stack" tabindex="0" data-detail="Stack: uses position and stability." />
+                            <img class="pv-level-image" src="button assets/16.png" alt="Level 16: Wedge" tabindex="0" data-detail="Wedge: redirects with angled surfaces." />
+                            <img class="pv-level-image" src="button assets/17.png" alt="Level 17: Launcher" tabindex="0" data-detail="Launcher: boosts objects over obstacles." />
+                            <img class="pv-level-image" src="button assets/18.png" alt="Level 18: Springboard" tabindex="0" data-detail="Springboard: launches objects with stored energy." />
+                            <img class="pv-level-image" src="button assets/19.png" alt="Level 19: Bridge ramp" tabindex="0" data-detail="Bridge ramp: combines height and path to cross together." />
+                            <img class="pv-level-image" src="button assets/20.png" alt="Level 20: Barrier" tabindex="0" data-detail="Barrier: changes the route by blocking part of the scene." />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="pv-split-right">
-                    <div class="pv-level-detail" aria-live="polite">Hover a level to see what kind of physical problem it represents.</div>
+                    <div class="pv-copy">
+                      <p class="pv-play-link-wrap">
+                      <a class="pv-play-link" href="https://scripts.mit.edu/~k2smith/toolgames/" target="_blank" rel="noopener noreferrer">Play the Virtual Tools game yourself</a>
+                    </p>
 
                     <div class="pv-caption">
-                      <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-                      <p class="pv-caption-original" hidden>[Original caption paste here]</p>
+                      <p class="pv-caption-translated">There are 20 levels. In each one, you pick a tool to move the red object into the green goal. Black objects don’t move, blue ones do, and you can’t place tools in gray areas. A/B levels are paired versions.</p>
+                      <p class="pv-caption-original" hidden>Twenty levels were used in the Virtual Tools game. Players choose one of three tools (shown to the right of each level) to place in the scene to get a red object into the green goal area. Black objects are fixed, while blue objects also move; gray regions are prohibited for tool placement. Levels denoted with A/B labels are matched pairs.</p>
                     </div>
 
                     <div class="pv-see">
                       <p class="pv-see-title">What you're seeing</p>
                       <ul class="pv-bullets">
-                        <li>The study uses many different physical puzzles.</li>
-                        <li>Levels vary in how tool placement changes outcomes.</li>
-                        <li>This breadth supports testing a general learning idea.</li>
+                        <li>Levels leverage different physical concepts, such as blocking, tipping or supporting objects in a scene</li>
+                        <li>12 levels are matched pairs (A/B) that contain subtle differences which have large effects on the strategies needed to succeed</li>
                       </ul>
                     </div>
-                  </div>
-                </div>
+                    </div>
               </article>
+
+              <div class="pv-see pv-see--spaced">
+                <p class="pv-see-title">Constraints</p>
+                <ul class="pv-bullets">
+                  <li>Only one action per attempt (forces planning before acting)</li>
+                  <li>Multiple attempts allowed (captures real-life learning: try, fail, try again)</li>
+                  <li>Actions cannot be changed mid-trial</li>
+                  <li>Time limit: 2 minutes per level</li>
+                </ul>
+                <p class="prose">Each participant solved 14 levels (8 unique + 6 from matched pairs).</p>
+              </div>
             </div>
           </details>
 
           <details class="drop">
             <summary class="drop-summary" id="sd-variables">Variables</summary>
             <div class="drop-body">
-              <div class="article-slot article-slot--compact" data-hint="Independent variable: what you manipulated."></div>
-              <div class="article-slot article-slot--compact" data-hint="Dependent variable: what you measured."></div>
+              <div class="article-slot article-slot--compact" data-hint="Independent variable: what you manipulated.">
+                <ul class="pv-bullets">
+                  <strong>Independent Variable: what you manipulated.</strong>
+                  <li>Type of level/problem (e.g., bridging, blocking, supporting)</li>
+                  <li>Subtle differences between similar levels (matched pairs)</li>
+                  <li>Available tools and environment setup</li>
+                </ul>
+              </div>
+              <div class="article-slot article-slot--compact" data-hint="Dependent variable: what you measured.">
+                <ul class="pv-bullets">
+                  <strong>Dependent Variable: what you measured.</strong>
+                  <li>Success rate</li>
+                  <li>Number of attempts</li>
+                  <li>Type of actions chosen</li>
+                  <li>Learning patterns over time</li>
+                  <li>Strategy changes</li>
+                </ul>
+              </div>
             </div>
           </details>
 
           <details class="drop">
             <summary class="drop-summary" id="sd-participants">Participants</summary>
             <div class="drop-body">
-              <div class="article-slot article-slot--compact" data-hint="Who participated and why."></div>
+              <div class="article-slot article-slot--compact" data-hint="Who participated and why.">
+                <ul class="pv-bullets">
+                  <li>94 adult participants</li>
+                  <li>Later validation: 50 new participants</li>
+                </ul>
+              </div>
             </div>
           </details>
 
@@ -339,59 +390,27 @@
             <summary class="drop-summary" id="sd-model">Model (SSUP)</summary>
             <div class="drop-body">
               <h3 class="subhead">3 STEPS</h3>
-              <p class="prose">Sample, simulate, update. Explain how the internal steps map to behavior.</p>
-
-              <article class="pv-block" id="pv-fig4bc" data-fig="Fig. 4B+4C" data-interaction="mode">
-                <div class="pv-top">
-                  <div class="pv-figmeta">
-                    <span class="pv-figlabel">Fig. 4B+4C</span>
-                    <span class="pv-figname">Internal thinking: mind vs world</span>
-                  </div>
-                  <button type="button" class="pv-toggle-original" data-pv-toggle-original aria-expanded="false">Show original caption</button>
-                </div>
-
-                <div class="pv-visual">
-                  <div class="pv-mode">
-                    <div class="pv-mode-controls" role="tablist" aria-label="SSUP representation mode">
-                      <button class="pv-mode-btn is-active" type="button" data-mode="mind">In the mind</button>
-                      <button class="pv-mode-btn" type="button" data-mode="world">In the world</button>
-                    </div>
-                    <div class="pv-mode-visual" aria-label="Mode visual placeholder">
-                      <div class="pv-mode-layer" data-mode-layer="mind">
-                        <div class="pv-visual-placeholder">A simulated scene in the mind (internal rollout)</div>
-                      </div>
-                      <div class="pv-mode-layer" data-mode-layer="world" hidden>
-                        <div class="pv-visual-placeholder">What happens in the world (the actual trial)</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pv-caption">
-                  <p class="pv-caption-translated">[CAPTION translated to plain English]</p>
-                  <p class="pv-caption-original" hidden>[Original caption paste here]</p>
-                </div>
-
-                <div class="pv-see">
-                  <p class="pv-see-title">What you're seeing</p>
-                  <ul class="pv-bullets">
-                    <li>The model simulates outcomes before choosing a policy update.</li>
-                    <li>Mind vs world is a mapping between internal prediction and external behavior.</li>
-                    <li>Toggle it to connect the abstraction to the trial loop.</li>
-                  </ul>
-                </div>
-              </article>
+              <p class="prose">
+                <ul class="pv-bullets">
+                  <li>Sample: People choose a reasonable action to try (e.g., which tool to use and where to place it).</li>
+                  <li>Simulate: Predicting the outcome using mental “intuitive physics”</li>
+                  <li>Update: Improving future actions based on success or failure </li>
+                </ul>
+                This process helps explain how people can efficiently solve new problems with minimal trial
+              </p>
 
               <div class="big-idea">
-                <h3 class="big-idea-title">FLOW DIAGRAM</h3>
-                <p class="big-idea-text">Add a flow diagram here (or keep this placeholder): Sample -> Simulate -> Update.</p>
+                <h3 class="big-idea-title">CONCEPT</h3>
+                <p class="big-idea-text">Sample -> Simulate -> Update.</p>
               </div>
             </div>
           </details>
 
           <aside class="insight-box">
             <h3 class="insight-title">INSIGHT BOX</h3>
-            <p class="insight-text">This section groups what you did (method) and how you explain behavior (model) so readers can connect procedure → prediction.</p>
+            <p class="insight-text">
+              By linking the experiment with the model, this section shows that human behavior is not random. Instead, it follows a structured process that can be explained and predicted.
+            </p>
           </aside>
         </div>
       </section>

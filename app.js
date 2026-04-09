@@ -285,7 +285,7 @@
     });
 
     // Levels grid
-    document.querySelectorAll(".pv-level").forEach(function (btn) {
+    document.querySelectorAll(".pv-level, .pv-level-image").forEach(function (btn) {
       var block = btn.closest(".pv-block");
       var detail = block ? block.querySelector(".pv-level-detail") : null;
       function apply() {
